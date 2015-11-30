@@ -1,0 +1,11 @@
+﻿```xml
+<Manifest>
+  <AgentType>Android_Android</AgentType>
+  <Resources />
+  <TimeoutSeconds>0</TimeoutSeconds>
+</Manifest>
+```
+```csharp
+// Sketch your next great idea!
+```
+
