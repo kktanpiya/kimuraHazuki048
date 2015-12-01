@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewTakwim"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llMHeT2ErrorLayout"
+        android:gravity="center">
+        <TextView
+            android:text="Tiada data tersedia."
+            android:id="@+id/tvMHeT2ErrorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#ff969696"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px" />
+</RelativeLayout>

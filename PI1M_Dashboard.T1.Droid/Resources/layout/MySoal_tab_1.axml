@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llMST1ErrorLayout"
+        android:visibility="visible"
+        android:gravity="center">
+        <TextView
+            android:text="Tiada data tersedia"
+            android:id="@+id/tvMST1ErrorStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#ff969696"
+            android:gravity="center" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <!--com.refractored.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_pencil"
+            fab:fab_colorNormal="@color/primaryColor"
+            fab:fab_colorPressed="@color/primaryColorDark"
+            fab:fab_colorRipple="@color/ColorPrimary" /-->
+    </FrameLayout>
+</RelativeLayout>

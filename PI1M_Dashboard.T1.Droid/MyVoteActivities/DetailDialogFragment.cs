@@ -1,0 +1,67 @@
+﻿
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Android.Graphics.Drawables;
+using Android.Graphics;
+using PI1M_Dashboard.T1.Droid;
+
+namespace MyVote
+{		
+	public class DetailDialogFragment : DialogFragment
+	{
+		TextView mtvName, mtvNameInput, mtvTitle, mtvTitleInput;
+
+		public static DetailDialogFragment newInstance(string name, string desc)
+		{
+			DetailDialogFragment detailDialog = new DetailDialogFragment ();
+
+			Bundle args = new Bundle ();
+			args.PutString ("name", name);
+			args.PutString ("desc", desc);
+			detailDialog.Arguments = args;
+			return detailDialog;
+
+		}
+			
+		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			base.OnCreate (savedInstanceState);
+
+			View view = inflater.Inflate (Resource.Layout.DetailDialogFragment, container, false);
+			Dialog.Window.RequestFeature (WindowFeatures.NoTitle);
+
+			mtvName = view.FindViewById <TextView> (Resource.Id.tvName);
+			mtvNameInput = view.FindViewById <TextView> (Resource.Id.tvNameInput);
+			mtvTitle = view.FindViewById <TextView> (Resource.Id.tvTitle);
+			mtvTitleInput = view.FindViewById <TextView> (Resource.Id.tvTitleInput);
+
+			string name = Arguments.GetString ("name");
+			string desc = Arguments.GetString ("desc");
+
+			mtvNameInput.Text = name;
+			mtvTitleInput.Text = desc;
+
+			return view;
+		}
+			
+		public override void OnResume()
+		{
+			// Auto size the dialog based on it's contents
+			Dialog.Window.SetLayout(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+
+			// Make sure there is no background behind our view
+			Dialog.Window.SetBackgroundDrawable(new ColorDrawable(Color.Transparent));
+
+			// Disable standard dialog styling/frame/theme: our custom view should create full UI
+			//SetStyle(Android.Support.V4.App.DialogFragment.StyleNoFrame, Android.Resource.Style.Theme);
+
+			base.OnResume();
+		}
+	}
+
+}
+

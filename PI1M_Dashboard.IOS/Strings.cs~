@@ -1,0 +1,10 @@
+﻿using System;
+
+namespace PI1M_Dashboard.IOS
+{
+	public class Strings
+	{
+		public static string TitleString() { return "PI1M Dashboard"; }
+	}
+}
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<resources>
+		<color name="primaryColor">#488FCC</color>
+		<color name="primaryColorDark">#C2185B</color>
+		<color name="translucentWhite">#55ffffff</color>
+		<color name="ColorPrimary">#FFFFFF</color>
+		<color name="ColorPrimaryDark">#FFFFFF</color>
+		<color name="tabsScrollColor">#FFFFFF</color>
+		<color name="barColorGrey">#FF404040</color>
+		<color name="settingsTitleColorGrey">#ffc9c9c9</color>
+		<color name="settingsColorGrey">#FFd7d7d7</color>
+		<color name="settingsDescTextGrey">#ff838383</color>
+		<color name="window_background">#FFF5F5F5</color>
+		<color name="blackColor">#FF000000</color>
+		<color name="white">#FFE8E8E8</color>
+</resources>
+

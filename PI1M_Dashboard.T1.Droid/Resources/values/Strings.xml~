@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">PI1M Dashboard</string>
+	<string name="open_drawer">Open Drawer</string>
+	<string name="close_drawer">Close Drawer</string>
+	<string name="copyright">Hakcipta Terpelihara © 2015 Ingeniworks Sdn. Bhd.</string>
+	<string name="terms">Terma dan Syarat Tertakluk</string>
+	<string name="generallabel_okbtn">OK</string>
+	<string name="generallabel_cancelbtn">Batal</string>
+
+	<string name="menu_dashboard">Dashboard</string>
+	<string name="menu_mykomuniti">MyKomuniti</string>
+	<string name="menu_mysoal">MySoal</string>
+	<string name="menu_myskool">MySkool</string>
+	<string name="menu_myhealth">MyHealth</string>
+	<string name="menu_myvote">MyVote</string>
+
+	<string name="login_username_warning">Sila isikan nama pengguna.</string>
+	<string name="login_username_hint">Sila masukkan nombor IC anda</string>
+	<string name="login_password_warning">Sila isikan kata laluan.</string>
+	<string name="login_password_hint">Sila masukkan kata laluan anda.</string>
+	<string name="login_failed_warning">Nama Pengguna dan/atau Kata Laluan tidak sah. Sila periksa semula.</string>
+	<string name="login_internetconnfail_title">Masalah Sambungan Internet</string>
+	<string name="login_internetconnfail_details">Aplikasi ini memerlukan sambungan 
+	internet. Sila sambungkan talian internet dan mulakan semula aplikasi ini.</string>
+	<string name="login_unknownfailure_warning">Terdapat masalah. Sila cuba sekali lagi.</string>
+
+
+	<string name="about_appname">PI1M Dashboard</string>
+	<string name="about_vername">Version 2.1.1</string>
+	<string name="about_buildno">(Build Number 18, 12 Sep 2015 5:05:39 AM)</string>
+	<string name="about_copyright">Hakcipta Terpelihara © 2015 Ingeniworks Sdn. Bhd.</string>
+	<string name="about_disclaimer">Sebarang maklumat lanjut, sila lihat di</string>
+	<string name="about_disclaimer_link">http://www.msd.net.my/</string>
+	<string name="about_closeButton">OK</string>
+
+	<string name="myhealth_details_date">Tarikh</string>
+	<string name="myhealth_details_time">Masa</string>
+	<string name="myhealth_details_pulse">Tekanan Darah</string>
+	<string name="myhealth_details_bpm">Kadar Denyutan</string>
+	<string name="myhealth_details_status">Status</string>
+
+	<string name="myhealth_bw_details_date">Tarikh</string>
+	<string name="myhealth_bw_details_time">Masa</string>
+	<string name="myhealth_bw_details_weight">Berat</string>
+	<string name="myhealth_bw_details_bmi">BMI</string>
+	<string name="myhealth_bw_details_fat">Lemak</string>
+	<string name="myhealth_bw_details_leanweight">Berat Bersih</string>
+	<string name="myhealth_bw_details_bonemass">Jisim Tulang</string>
+	<string name="myhealth_bw_details_bmistatus">Status</string>
+
+	<string name="settings_login_main_title">LOG MASUK</string>
+	<string name="settings_login_rememberme_title">Ingati Saya</string>
+	<string name="settings_login_rememberme_subtitle">Membenarkan aplikasi ini mengingati pengguna yang
+	tidak melog keluar dari aplikasi selepas menggunakannya dan melog masuk secara automatik apabila
+	ingin masuk kembali ke aplikasi. <b>Semua notifikasi turut dinyahaktifkan.</b> </string>
+	<string name="settings_btn_activatelabel">AKTIFKAN</string>
+	<string name="settings_btn_deactivatelabel">NYAHAKTIFKAN</string>
+	<string name="settings_dbmodule_maintitle">DASHBOARD</string>
+	<string name="settings_module_title">Modul Dashboard</string>
+	<string name="settings_module_desc">Anda boleh memilih menu modul dalam dashboard
+	mengikut kehendak anda.</string>
+
+	<string name="report_description">Terima kasih kerana menggunakan aplikasi kami! Kami amat
+	berbangga kerana dengan menggunakan khidmat kami kepada komuniti PI1M dapat membantu
+	penyaluran maklumat secara cekap dan cepat demi memudahkan kehidupan seharian anda sebagai 
+	komuniti masyarakat yang bermaklumat.\n
+	\nJika anda mempunyai sebarang cadangan, pandangan mahupun aduan, anda boleh ketengahkannya disini. 
+	Untuk rekod kami, maklumat anda akan dihantar bersama. Segala maklumat anda adalah sulit dan 
+	persendirian. Tiada sebarang maklumat akan dikongsi.\n
+	\nSila lihat polisi privasi kami di http://dashboard.pi1m.my</string>
+
+	<string name="rate_message">Terima kasih kerana menggunakan aplikasi ini!
+	Sila ukurkan tahap kepuasan penggunaan aplikasi ini serta berikan sebarang 
+	pandangan, komen, aduan atau cadangan anda. Segala kata-kata anda amat 
+	dihargai dan memberikan kami panduan bagi meningkatkan mutu aplikasi ini.</string>
+
+
+
+	<string name="menu_settings">Settings</string>
+	<string name="checkin">Checkin</string>
+
+	<string name="howTo">Syarat dan Cara penyertaan:</string>
+    <string name="number1">1) Mendaftarkan diri sebagai ahli Pi1M
+    di kaunter Customer Service.</string>
+    <string name="number2">2) Memuat turun aplikasi Pi1M Dashboard di Google Play Store.</string>
+    <string name="number3">3) Memasukkan No. IC dan Kata Laluan pada ruangan Login.</string>
+    <string name="number4">4) Memasukkan Kod Penyertaan.</string>
+    <string name="number5">5) Menjawab 10 soalan Mudah.</string>
+   <string name="number8"> 6) Setelah penyertaan anda berjaya dihantar, nombor cabutan bertuah anda akan dipaparkan.</string>
+	<string name="number6">6) Jika semua soalan dijawab dengan betul dan berjaya dihantar, anda akan menerima satu kod Cabutan Bertuah.</string>
+    <string name="number7">7) Pemenang bertuah akan dipilih secara rawak daripada penyertaan yang di terima. </string>
+    <string name="syarat1"> Hanya satu penyertaan bagi setiap orang.</string>
+
+
+</resources>

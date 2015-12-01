@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- FAKE HEADER HEIGHT -->
+   <dimen name="header_height">230dp</dimen>
+   <!-- Default Action Bar Height Default Android Value-->
+   <dimen name="action_bar_height">56dp</dimen>
+   <!-- Default Toolbar Left Margin Default Android Value-->
+   <dimen name="toolbar_left_margin">72dp</dimen>
+
+   <!-- Parallax Scroll -->
+   <dimen name="detail_backdrop_height">256dp</dimen>
+   <dimen name="card_margin">16dp</dimen>
+   <dimen name="fab_margin">16dp</dimen>
+   <dimen name="list_item_avatar_size">40dp</dimen>
+
+</resources>

@@ -1,0 +1,40 @@
+﻿
+using System;
+
+using Foundation;
+using UIKit;
+
+namespace PI1M_Dashboard.IOS
+{
+	public class MMXDVCTBListViewControllerSource : UITableViewSource
+	{
+		public MMXDVCTBListViewControllerSource ()
+		{
+		}
+
+		public override nint NumberOfSections (UITableView tableView)
+		{
+			// TODO: return the actual number of sections
+			return 1;
+		}
+
+		public override nint RowsInSection (UITableView tableview, nint section)
+		{
+			// TODO: return the actual number of items in the section
+			return 1;
+		}
+
+		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+		{
+			var cell = tableView.DequeueReusableCell (MMXDVCTBBigMenuCell.Key) as MMXDVCTBBigMenuCell;
+			if (cell == null)
+				cell = new MMXDVCTBBigMenuCell ();
+			
+			// TODO: populate the cell with the appropriate data based on the indexPath
+			cell.DetailTextLabel.Text = "DetailsTextLabel";
+			
+			return cell;
+		}
+	}
+}
+

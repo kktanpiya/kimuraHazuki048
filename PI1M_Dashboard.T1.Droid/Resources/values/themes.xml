@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="CustomActionBarTheme" parent="CustomActionBarTheme.Base"> </style>
+    <style name="CustomActionBarTheme.Base" parent="Theme.AppCompat.Light.NoActionBar"> 
+		<item name ="colorPrimary">@color/primaryColor</item>
+		<item name ="colorPrimaryDark">@color/primaryColorDark</item>
+		<item name="android:windowTranslucentStatus">true</item>
+	</style>
+	<style name="TranslucentLayout" parent="android:style/Theme.Translucent">
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+	<style name="NoActionBarLayout" parent="Theme.AppCompat.NoActionBar">
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	<style name="MyAppActionBarTheme" parent="android:Theme.Holo">
+		<item name="android:actionBarStyle">@style/MyApp.ActionBar</item>
+	</style>
+	<style name="MyApp.ActionBar" parent="android:Widget.Holo.Light.ActionBar.Solid">
+		<item name="android:background">@drawable/blue_action_bar_background</item>
+	</style>
+</resources>
+

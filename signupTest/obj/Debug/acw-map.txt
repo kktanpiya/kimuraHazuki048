@@ -1,8 +1,0 @@
-signupTest.MainActivity, signupTest;md517956a9dc47641cfc0b43a2f7e91b9c7.MainActivity
-signupTest.MainActivity, signupTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md517956a9dc47641cfc0b43a2f7e91b9c7.MainActivity
-signupTest.MainActivity;md517956a9dc47641cfc0b43a2f7e91b9c7.MainActivity
-signuptest.MainActivity;md517956a9dc47641cfc0b43a2f7e91b9c7.MainActivity
-signupTest.dialog_signup, signupTest;md517956a9dc47641cfc0b43a2f7e91b9c7.dialog_signup
-signupTest.dialog_signup, signupTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md517956a9dc47641cfc0b43a2f7e91b9c7.dialog_signup
-signupTest.dialog_signup;md517956a9dc47641cfc0b43a2f7e91b9c7.dialog_signup
-signuptest.dialog_signup;md517956a9dc47641cfc0b43a2f7e91b9c7.dialog_signup

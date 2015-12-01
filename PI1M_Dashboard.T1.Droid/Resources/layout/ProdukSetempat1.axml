@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    cardview:cardElevation="4dp"
+    cardview:cardCornerRadius="5dp"
+    android:id="@+id/ProdukSetempat1">
+    <RelativeLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.CardContent">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/product_placeholder" />
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/center"
+            android:orientation="vertical"
+            android:background="#77000000">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/center"
+                android:paddingLeft="8dip"
+                android:text="RM 500"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dip"
+                android:text="Dimension 10 (tablet minda)"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16dp"
+                android:id="@+id/textView1"
+                android:layout_gravity="center"
+                android:textStyle="normal" />
+        </LinearLayout>
+        <Button
+            android:layout_below="@+id/LinearLayout1"
+            android:text="Tambah Ke Bakul"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:id="@+id/signUp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#ffffffff"
+            android:background="@drawable/btnmyshop2"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_cart"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

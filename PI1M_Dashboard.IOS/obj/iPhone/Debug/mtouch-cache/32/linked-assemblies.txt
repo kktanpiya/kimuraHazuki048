@@ -1,0 +1,7 @@
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.iOS.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/Calabash.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/JASidePanels.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/PI1M_Dashboard.IOS.exe
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/mscorlib.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.IOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Core.dll

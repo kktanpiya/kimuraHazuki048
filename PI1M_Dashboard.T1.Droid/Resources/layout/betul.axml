@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="#22844a"
+        android:visibility="invisible"
+        android:id="@+id/rl_betul">
+        <cheesebaron.rippleeffect.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rect2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ripple:rv_rippleDuration="200"
+            ripple:rv_type="rectangle"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Soalan Seterusnya"
+                android:id="@+id/btn_nextQuestion"
+                android:textSize="12dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/betulstyle"
+                android:textColor="#ffffffff" />
+        </cheesebaron.rippleeffect.RippleView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Betul. Klik untuk soalan seterusnya"
+            android:id="@+id/textView7"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_above="@+id/rect2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="false" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="#c71d2b"
+        android:visibility="invisible"
+        android:id="@+id/rl_salah">
+        <cheesebaron.rippleeffect.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rect3"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ripple:rv_rippleDuration="200"
+            ripple:rv_type="rectangle"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Cuba Lagi"
+                android:id="@+id/btn_tryAgain"
+                android:textSize="12dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/salahstyle"
+                android:textColor="#ffffffff" />
+        </cheesebaron.rippleeffect.RippleView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salah. Klik untuk cuba lagi."
+            android:textSize="12dp"
+            android:id="@+id/textView8"
+            android:gravity="center"
+            android:layout_above="@+id/rect3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="false" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:id="@+id/mainLinear">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="#22844a"
+            android:visibility="invisible"
+            android:id="@+id/rl_soalanTamat">
+            <cheesebaron.rippleeffect.RippleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rect1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ripple:rv_rippleDuration="200"
+                ripple:rv_type="rectangle"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Hantar Penyertaan"
+                    android:id="@+id/btn_soalanTamat"
+                    android:textSize="12dp"
+                    android:background="@drawable/betulstyle"
+                    android:textColor="#ffffffff"
+                    android:layout_centerInParent="true" />
+            </cheesebaron.rippleeffect.RippleView>
+            <ProgressBar xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressbar_submitquiz"
+                tools:visibility="visible"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Betul. Soalan kuiz tamat. Klik untuk hantar penyertaan."
+                android:id="@+id/textView9"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_above="@+id/rect1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffffff"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="false" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

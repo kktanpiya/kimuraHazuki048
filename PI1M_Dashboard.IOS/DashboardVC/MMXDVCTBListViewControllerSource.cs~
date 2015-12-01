@@ -1,0 +1,40 @@
+﻿
+using System;
+
+using Foundation;
+using UIKit;
+using System.Collections.ObjectModel;
+
+namespace PI1M_Dashboard.IOS
+{
+	public class MMXDVCTBListViewControllerSource : UITableViewSource
+	{
+		ObservableCollection<BigMainMenuListItem> listItem;
+
+		public MMXDVCTBListViewControllerSource (ObservableCollection<BigMainMenuListItem> listItem)
+		{
+			this.listItem = listItem;
+		}
+			
+		public override nint RowsInSection (UITableView tableview, nint section)
+		{
+			// TODO: return the actual number of items in the section
+			return listItem.Count;
+		}
+
+		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+		{
+			var cell = tableView.DequeueReusableCell (MMXDVCTBBigMenuCell.Key) as MMXDVCTBBigMenuCell;
+			if (cell == null)
+				cell = MMXDVCTBBigMenuCell.Create ();
+			
+			// TODO: populate the cell with the appropriate data based on the indexPath
+			cell.UpdateCell(listItem[indexPath.Row].MenuTitle,listItem[indexPath.Row].MenuSubTitle,listItem[indexPath.Row].MenuDesc);
+			
+			return cell;
+		}
+	}
+
+
+}
+

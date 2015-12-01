@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="3dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llTextHolder"
+            android:layout_weight="0.5"
+            android:minHeight="25px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:text="Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTitle"
+                android:textColor="#ff212121"
+                android:paddingTop="2dp"
+                android:textSize="18dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingBottom="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:text="text2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvContent"
+                android:textSize="14dp"
+                android:textColor="#ff757575"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B771F167-5C2F-4340-80FA-E3749B0D8694}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PI1M_Dashboard.IOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>PI1M_Dashboard.IOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.13.0\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="FlyoutNavigation">
+      <HintPath>..\Components\flyoutnavigation-1.5.1\lib\ios-unified\FlyoutNavigation.dll</HintPath>
+    </Reference>
+    <Reference Include="JASidePanels">
+      <HintPath>..\Components\jasidepanels-1.3.2.2\lib\ios-unified\JASidePanels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="MainStory.storyboard" />
+    <InterfaceDefinition Include="DashboardVC\MMXDVCSideLeftMenu.xib">
+      <DependentUpon>MMXDVCSideLeftMenu.cs</DependentUpon>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="DashboardVC\MMXDVCSLMCell.xib">
+      <DependentUpon>MMXDVCSLMCell.cs</DependentUpon>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="DashboardVC\MMXDVCTopBar.xib">
+      <DependentUpon>MMXDVCTopBar.cs</DependentUpon>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="DashboardVC\MMXDVCTBBigMenuCell.xib">
+      <DependentUpon>MMXDVCTBBigMenuCell.cs</DependentUpon>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="ExtendedMenusVC\ExMSettingsVC.xib" />
+    <InterfaceDefinition Include="ExtendedMenusVC\ExMAboutVC.xib" />
+    <InterfaceDefinition Include="MyKomunitiVC\MyKomunitiCenterVC.xib" />
+    <InterfaceDefinition Include="MyKomunitiVC\MyKomunitiTab1Cell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginVC.cs" />
+    <Compile Include="LoginVC.designer.cs">
+      <DependentUpon>LoginVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices.cs" />
+    <Compile Include="MainMenuXDVC.cs" />
+    <Compile Include="MainMenuXDVC.designer.cs">
+      <DependentUpon>MainMenuXDVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="values\Strings.cs" />
+    <Compile Include="values\Colors.cs" />
+    <Compile Include="DashboardVC\MMXDVCSideLeftMenu.cs" />
+    <Compile Include="DashboardVC\MMXDVCSideLeftMenu.designer.cs">
+      <DependentUpon>MMXDVCSideLeftMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardVC\MMXDVCSLMCell.cs" />
+    <Compile Include="DashboardVC\MMXDVCSLMCell.designer.cs">
+      <DependentUpon>MMXDVCSLMCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardVC\MMXDVCSLMListViewSource.cs">
+    </Compile>
+    <Compile Include="DashboardVC\MMXDVCTopBar.cs" />
+    <Compile Include="DashboardVC\MMXDVCTopBar.designer.cs">
+      <DependentUpon>MMXDVCTopBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="values\TableItems.cs" />
+    <Compile Include="values\CustomLibs.cs" />
+    <Compile Include="DashboardVC\MMXDVCTBBigMenuCell.cs" />
+    <Compile Include="DashboardVC\MMXDVCTBBigMenuCell.designer.cs">
+      <DependentUpon>MMXDVCTBBigMenuCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardVC\MMXDVCTBListViewSource.cs" />
+    <Compile Include="values\AppMenus.cs" />
+    <Compile Include="ExtendedMenusVC\ExMSettingsVC.cs" />
+    <Compile Include="ExtendedMenusVC\ExMSettingsVC.designer.cs">
+      <DependentUpon>ExMSettingsVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedMenusVC\ExMAboutVC.cs" />
+    <Compile Include="ExtendedMenusVC\ExMAboutVC.designer.cs">
+      <DependentUpon>ExMAboutVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyKomunitiVC\MyKomunitiCenterVC.cs" />
+    <Compile Include="MyKomunitiVC\MyKomunitiCenterVC.designer.cs">
+      <DependentUpon>MyKomunitiCenterVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyKomunitiVC\MyKomunitiTab1Cell.cs" />
+    <Compile Include="MyKomunitiVC\MyKomunitiTab1Cell.designer.cs">
+      <DependentUpon>MyKomunitiTab1Cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyKomunitiVC\MyKomunitiTab1TableViewController.cs" />
+    <Compile Include="MyKomunitiVC\MyKomunitiTab1TableViewCell.cs" />
+    <Compile Include="MyKomunitiVC\MyKomunitiTab1TableViewSource.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_pi1mlogo.png" />
+    <BundleResource Include="Resources\ic_pficon.png" />
+    <BundleResource Include="Resources\ic_sign_out.png" />
+    <BundleResource Include="Resources\home3.png" />
+    <BundleResource Include="Resources\ic_mysoal.png" />
+    <BundleResource Include="Resources\people2.png" />
+    <BundleResource Include="Resources\cart2.png" />
+    <BundleResource Include="Resources\cup2.png" />
+    <BundleResource Include="Resources\heart2.png" />
+    <BundleResource Include="Resources\shield2.png" />
+    <BundleResource Include="Resources\d_commpic_one.png" />
+    <BundleResource Include="Resources\ic_myposter.png" />
+    <BundleResource Include="Resources\ic_myhealth.png" />
+    <BundleResource Include="Resources\ic_mykomuniti.png" />
+    <BundleResource Include="Resources\ic_myshop_front.png" />
+    <BundleResource Include="Resources\ic_myskool.png" />
+    <BundleResource Include="Resources\ic_arrow_down.png" />
+    <BundleResource Include="Resources\ic_arrow_up.png" />
+    <BundleResource Include="Resources\ic_about_48dp.png" />
+    <BundleResource Include="Resources\ic_gear_grey.png" />
+    <BundleResource Include="Resources\ic_review_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PI1M_Dashboard\PI1M_Dashboard.csproj">
+      <Project>{1F777594-4D3D-4479-A927-25D380ECE3F7}</Project>
+      <Name>PI1M_Dashboard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="jasidepanels">
+      <Version>1.3.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+</Project>

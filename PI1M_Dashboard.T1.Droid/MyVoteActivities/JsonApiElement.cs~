@@ -1,0 +1,43 @@
+﻿
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
+namespace PI1M_Dashboard.T1.Droid
+{
+	public class Actor
+	{
+		[JsonProperty("name")]
+		public string name { get; set; }
+		[JsonProperty("description")]
+		public string description { get; set; }
+		[JsonProperty("image")]
+		public string image { get; set; }
+	}
+		
+	public class RootObject2
+	{
+		[JsonProperty("actors")]
+		public List<Actor> actors { get; set; }
+	}
+
+	public class MyVoteJson
+	{
+		[JsonProperty("id")]
+		public string id { get; set;}
+		[JsonProperty("path")]
+		public string path { get; set;}
+		[JsonProperty("vote")]
+		public bool vote { get; set;}
+	}
+
+	public class JsonObject
+	{
+		public int total { get; set; }
+		public int per_page { get; set; }
+		public int current_page { get; set; }
+		public int last_page { get; set; }
+		public int from { get; set; }
+		public int to { get; set; }
+		public List<MyVoteJson> data { get; set; }
+	}
+}

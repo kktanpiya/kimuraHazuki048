@@ -1,0 +1,11 @@
+﻿
+namespace PI1M_Dashboard.T1.Droid
+{	
+	public class dummyData
+	{
+		public string imageId { get; set; }
+		public string imageString { get; set; }
+		public bool voteStat { get; set; }
+
+	}
+}

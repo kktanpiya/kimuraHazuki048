@@ -1,0 +1,49 @@
+﻿
+using System;
+
+using Foundation;
+using UIKit;
+using System.Collections.ObjectModel;
+
+namespace PI1M_Dashboard.IOS
+{
+	public partial class MMXDVCSideLeftMenu : UIViewController
+	{
+		public MMXDVCSideLeftMenu () : base ("MMXDVCSideLeftMenu", null)
+		{
+		}
+
+		public override void DidReceiveMemoryWarning ()
+		{
+			// Releases the view if it doesn't have a superview.
+			base.DidReceiveMemoryWarning ();
+			
+			// Release any cached data, images, etc that aren't in use.
+		}
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			// Perform any additional setup after loading the view, typically from a nib.
+
+			View.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleBottomMargin;
+			View.SizeToFit ();
+
+			ObservableCollection<MainMenuListItem> MenuItems = new ObservableCollection<MainMenuListItem>();
+			MenuItems.Add(new MainMenuListItem() { MenuTitleName = Strings.SLMDashboardString });
+			MenuItems.Add(new MainMenuListItem() { MenuTitleName = Strings.SLMMyKomunitiString });
+			MenuItems.Add(new MainMenuListItem() { MenuTitleName = Strings.SLMMySoalString });
+			MenuItems.Add(new MainMenuListItem() { MenuTitleName = Strings.SLMMyHealthString });
+			MenuItems.Add(new MainMenuListItem() { MenuTitleName = Strings.SLMMySkoolString });
+			MenuItems.Add(new MainMenuListItem() { MenuTitleName = Strings.SLMMyShopString });
+
+			uvSLMProfilePart.BackgroundColor = CustomLibs.ColorFromHexString (Colors.MainMenuBarColor,1.0f);
+			uvSLMLogoutPart.BackgroundColor = CustomLibs.ColorFromHexString (Colors.SideMenuLogoutBackgroundColor, 1.0f);
+			utvSLMMenuList.Source = new MMXDVCSLMListViewSource (MenuItems);
+			utvSLMMenuList.SeparatorColor = UIColor.Clear;
+
+		}
+	}
+}
+

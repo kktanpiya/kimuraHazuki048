@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:background="@android:color/background_light"
+    p1:id="@+id/linearLayout1">
+    <include
+        layout="@layout/app_bar" />
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:layout_weight="1">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:layout_width="match_parent"
+            p1:layout_height="48dp"
+            p1:id="@+id/linearLayout4"
+            p1:layout_marginLeft="16dp"
+            p1:layout_marginRight="16dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp">
+            <TextView
+                p1:text="To :"
+                p1:layout_width="wrap_content"
+                p1:layout_height="match_parent"
+                p1:id="@+id/textView1"
+                p1:gravity="center"
+                p1:textSize="16dp"
+                p1:paddingTop="16dp"
+                p1:paddingBottom="8dp"
+                p1:background="@drawable/textbackground"
+                p1:paddingRight="8dp"
+                p1:textColor="#ff757575" />
+            <EditText
+                p1:inputType="textEmailAddress"
+                p1:layout_width="wrap_content"
+                p1:layout_height="match_parent"
+                p1:id="@+id/etMSCMTTo"
+                p1:layout_weight="1"
+                p1:background="@drawable/textbackground"
+                p1:paddingTop="16dp"
+                p1:paddingRight="8dp"
+                p1:paddingBottom="8dp"
+                p1:textColor="#ff212121" />
+            <LinearLayout
+                p1:orientation="vertical"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="48dp"
+                p1:layout_height="48dp"
+                p1:id="@+id/llMSCMTGetPBT"
+                p1:layout_gravity="center"
+                p1:background="@drawable/textbackground">
+                <Button
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/btnMSCMTGetPBT"
+                    p1:background="@drawable/ic_downeey_sr" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="48dp"
+            p1:id="@+id/linearLayout5"
+            p1:layout_marginLeft="16dp"
+            p1:layout_marginRight="16dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp">
+            <TextView
+                p1:text="Subject :"
+                p1:layout_width="wrap_content"
+                p1:layout_height="match_parent"
+                p1:id="@+id/textView1"
+                p1:gravity="center"
+                p1:textSize="16dp"
+                p1:paddingTop="16dp"
+                p1:paddingBottom="8dp"
+                p1:background="@drawable/textbackground"
+                p1:paddingRight="8dp"
+                p1:textColor="#ff757575" />
+            <EditText
+                p1:layout_width="match_parent"
+                p1:layout_height="match_parent"
+                p1:id="@+id/etMSCMTSubject"
+                p1:textSize="16dp"
+                p1:paddingTop="16dp"
+                p1:paddingBottom="8dp"
+                p1:background="@drawable/textbackground"
+                p1:textColor="#ff212121" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayout6"
+            p1:layout_marginRight="16dp"
+            p1:layout_marginLeft="16dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp">
+            <EditText
+                p1:inputType="textMultiLine"
+                p1:layout_width="match_parent"
+                p1:layout_height="match_parent"
+                p1:id="@+id/etMSCMTPesanan"
+                p1:hint="Message"
+                p1:gravity="top"
+                p1:textSize="16dp"
+                p1:background="@drawable/messagebackground"
+                p1:textColorHint="#ff757575"
+                p1:textColor="#ff000000" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout3"
+        p1:layout_weight="1" />
+</LinearLayout>

@@ -1,0 +1,42 @@
+﻿<Properties StartupItem="JASidePanelsSample/JASidePanelsSample.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.INGENIWORKS Mobile Team" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="JASidePanelsSample" expanded="True">
+            <Node name="JASidePanelsSample" expanded="True" />
+          </Node>
+          <Node name="PI1M_Dashboard.T1" expanded="True">
+            <Node name="PI1M_Dashboard.IOS" expanded="True">
+              <Node name="DashboardVC" expanded="True" />
+              <Node name="ExtendedMenusVC" expanded="True" />
+              <Node name="values" expanded="True">
+                <Node name="Colors.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="PI1M_Dashboard.T1.Droid" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+          <Node name="ShahanizaDUNApps" expanded="True">
+            <Node name="ShahanizaDUNApps.IOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="JASidePanelsSample" expanded="True" />
+          <Node name="PI1M_Dashboard.T1" expanded="True" selected="True" />
+          <Node name="ShahanizaDUNApps" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

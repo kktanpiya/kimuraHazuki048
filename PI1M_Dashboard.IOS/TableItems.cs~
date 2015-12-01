@@ -1,0 +1,16 @@
+﻿using System;
+
+namespace PI1M_Dashboard.IOS
+{
+	public class TableItems
+	{
+
+
+	}
+	public class MainMenuListItem {
+
+		public string MenuTitleName { get; set; }
+
+	}
+}
+

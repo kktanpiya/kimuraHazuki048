@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace PI1M_Dashboard.IOS
+{
+	public class Colors
+	{
+		public static string MainMenuBarColor () { return "#488FCC"; }
+		public static string SideMenuProfileBackgroundColor () { return "#2196F3"; }
+		public static string SideMenuLogoutBackgroundColor () { return "#363635"; }
+	}
+}
+

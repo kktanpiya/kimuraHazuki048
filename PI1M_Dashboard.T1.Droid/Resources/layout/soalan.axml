@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soalan 1 :"
+        android:textColor="#757575"
+        android:textSize="13dp"
+        android:id="@+id/tv_QuestionNo"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/tv_Question"
+        android:layout_alignStart="@+id/tv_Question" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="#757575"
+        android:text="Pi1M Dashboard merupakan aplikasi khas yang dibina untuk kegunaan komuniti setempat di sekitar Pusat Internet 1Malaysia (Pi1M). Ia mengambil kira keperluan komuniti setempat dari segi perhubungan, pembelajaran, perniagaan, kesihatan dan juga pentadbiran."
+        android:id="@+id/tv_Question"
+        android:layout_below="@+id/tv_QuestionNo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/10"
+        android:textSize="11dp"
+        android:textColor="#757575"
+        android:id="@+id/tv_QuestionIndicator"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp" />
+</RelativeLayout>

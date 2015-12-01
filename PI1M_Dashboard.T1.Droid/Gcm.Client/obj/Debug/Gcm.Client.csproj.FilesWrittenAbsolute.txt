@@ -1,0 +1,12 @@
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/MonoAndroid,Version=v4.0.3.AssemblyAttribute.cs
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/Gcm.Client.obj.Debug.__AndroidLibraryProjects__.zip
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/lib/Android/GCM.Client.dll.mdb
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/lib/Android/GCM.Client.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/lib/Android/GCM.Client.apk
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/android/bin/GCM.Client.apk
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/res/values/strings.xml
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/R.cs.flag
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/lib/Android/GCM.Client-Signed.apk
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/uploadflags.txt
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/GCM.Client.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard.T1.Droid/Gcm.Client/obj/Debug/GCM.Client.dll.mdb

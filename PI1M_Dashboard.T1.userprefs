@@ -1,0 +1,9 @@
+﻿<Properties StartupItem="PI1M_Dashboard.T1.Droid\PI1M_Dashboard.T1.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android_3.7" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PI1M__Dashboard.T1.Droid AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>

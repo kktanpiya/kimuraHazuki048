@@ -1,0 +1,48 @@
+﻿
+using System;
+
+using Foundation;
+using UIKit;
+
+/* 
+ * ==================================================
+ * 
+ * Ini adalah fail untuk Side Left Menu
+ * 
+ * Yang benar, Zul
+ * 
+ * ==================================================
+ */
+
+namespace PI1M_Dashboard.IOS
+{
+	public class MMXDVCSLMListViewController : UITableViewController
+	{
+		
+		UITableView MenuTable;
+
+		public MMXDVCSLMListViewController (UITableView MenuTable) : base (UITableViewStyle.Plain)
+		{
+			this.MenuTable = MenuTable;
+		}
+
+		public override void DidReceiveMemoryWarning ()
+		{
+			// Releases the view if it doesn't have a superview.
+			base.DidReceiveMemoryWarning ();
+			
+			// Release any cached data, images, etc that aren't in use.
+		}
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			// Register the TableView's data source
+			//MenuTable.Source = new MMXDVCSLMListViewSource ("DashboardDaa");
+
+
+		}
+	}
+}
+

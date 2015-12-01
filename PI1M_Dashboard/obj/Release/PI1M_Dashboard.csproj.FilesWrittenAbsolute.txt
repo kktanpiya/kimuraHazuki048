@@ -1,0 +1,10 @@
+/Users/ingeniworks/Projects/CloneRepo/PI1M_Dashboard.T1/PI1M_Dashboard/obj/Release/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/ingeniworks/Projects/CloneRepo/PI1M_Dashboard.T1/PI1M_Dashboard/bin/Release/PI1M_Dashboard.dll.mdb
+/Users/ingeniworks/Projects/CloneRepo/PI1M_Dashboard.T1/PI1M_Dashboard/bin/Release/PI1M_Dashboard.dll
+/Users/ingeniworks/Projects/CloneRepo/PI1M_Dashboard.T1/PI1M_Dashboard/obj/Release/PI1M_Dashboard.dll
+/Users/ingeniworks/Projects/CloneRepo/PI1M_Dashboard.T1/PI1M_Dashboard/obj/Release/PI1M_Dashboard.dll.mdb
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard/obj/Release/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard/bin/Release/PI1M_Dashboard.dll.mdb
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard/bin/Release/PI1M_Dashboard.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard/obj/Release/PI1M_Dashboard.dll
+/Users/ingeniworks/Projects/PI1M_Dashboard.T1.13Nov2015.105613/PI1M_Dashboard/obj/Release/PI1M_Dashboard.dll.mdb

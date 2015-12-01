@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B81A65D6-CB9B-43CF-95AC-D4B486176189}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PI1M_Dashboard.T1.Droid</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>PI1M_Dashboard.T1.Droid</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Kerja_MSD/[[KeyStores]]/Google Play/Dashboard PI1M/com.ingeniworks.dashboarda/com.ingeniworks.dashboarda.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>igw383</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>pi1mdashboard</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>igw383</AndroidSigningKeyPass>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8.3\lib\android\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json" />
+    <Reference Include="Square.OkIO">
+      <HintPath>..\packages\Square.OkIO.1.5.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.4.0.1\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.Picasso">
+      <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json.Schema">
+      <HintPath>..\packages\Newtonsoft.Json.Schema.1.0.11\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.FloatingActionButton">
+      <HintPath>..\packages\Refractored.FloatingActionButton.1.3.4\lib\MonoAndroid10\Refractored.FloatingActionButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Macaw.UIComponents">
+      <HintPath>..\Components\MultiImageView-1.1\lib\android\Macaw.UIComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Controls.FlipNumbers.Android">
+      <HintPath>..\Components\flipnumbers-1.1.0.1\lib\android\Xamarin.Controls.FlipNumbers.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyHealthActivities\BPDetails.cs" />
+    <Compile Include="MyHealthActivities\BWDetails.cs" />
+    <Compile Include="MyHealthActivities\Child_Data.cs" />
+    <Compile Include="MyHealthActivities\DetailInfo.cs" />
+    <Compile Include="MyHealthActivities\ExpandableListAdapter.cs" />
+    <Compile Include="MyHealthActivities\HeaderInfo.cs" />
+    <Compile Include="MyHealthActivities\MainActivity.cs" />
+    <Compile Include="MyHealthActivities\MyLinearLayoutManager.cs" />
+    <Compile Include="MyHealthActivities\RecyclerViewAdapter.cs" />
+    <Compile Include="MyHealthActivities\SlidingTabScrollView.cs" />
+    <Compile Include="MyHealthActivities\SlidingTabStrip.cs" />
+    <Compile Include="MyHealthActivities\Tab_1.cs" />
+    <Compile Include="MyHealthActivities\Tab_2.cs" />
+    <Compile Include="MyHealthActivities\Takwim_Detail.cs" />
+    <Compile Include="MyHealthActivities\Takwim_NestedRecyclerViewAdapter.cs" />
+    <Compile Include="MyHealthActivities\Takwim_RecyclerViewAdapter.cs" />
+    <Compile Include="MyHealthActivities\ViewPagerAdapter.cs" />
+    <Compile Include="MySkoolActivities\Announcement_Details.cs" />
+    <Compile Include="MySkoolActivities\Child_Data.cs" />
+    <Compile Include="MySkoolActivities\DetailInfo.cs" />
+    <Compile Include="MySkoolActivities\ExpandableListAdapter.cs" />
+    <Compile Include="MySkoolActivities\HeaderInfo.cs" />
+    <Compile Include="MySkoolActivities\MyLinearLayoutManager.cs" />
+    <Compile Include="MySkoolActivities\RecyclerViewAdapter.cs" />
+    <Compile Include="MySkoolActivities\SlidingTabScrollView.cs" />
+    <Compile Include="MySkoolActivities\SlidingTabStrip.cs" />
+    <Compile Include="MySkoolActivities\Tab_1.cs" />
+    <Compile Include="MySkoolActivities\Tab_2.cs" />
+    <Compile Include="MySkoolActivities\Takwim_Detail.cs" />
+    <Compile Include="MySkoolActivities\Takwim_ListViewAdapter.cs" />
+    <Compile Include="MySkoolActivities\Takwim_NestedRecyclerViewAdapter.cs" />
+    <Compile Include="MySkoolActivities\Takwim_RecyclerViewAdapter.cs" />
+    <Compile Include="MySkoolActivities\ViewPagerAdapter.cs" />
+    <Compile Include="MySoalActivities\Child_Data.cs" />
+    <Compile Include="MySoalActivities\ComposeMsg.cs" />
+    <Compile Include="MySoalActivities\DetailInfo.cs" />
+    <Compile Include="MySoalActivities\ExpandableListAdapter.cs" />
+    <Compile Include="MySoalActivities\HeaderInfo.cs" />
+    <Compile Include="MySoalActivities\MainActivity.cs" />
+    <Compile Include="MySoalActivities\MesejDihantar_Details.cs" />
+    <Compile Include="MySoalActivities\MesejDihantar_RecycleViewAdapter.cs" />
+    <Compile Include="MySoalActivities\MyLinearLayoutManager.cs" />
+    <Compile Include="MySoalActivities\PetiMasuk_Details.cs" />
+    <Compile Include="MySoalActivities\RecyclerViewAdapter.cs" />
+    <Compile Include="MySoalActivities\SlidingTabScrollView.cs" />
+    <Compile Include="MySoalActivities\SlidingTabStrip.cs" />
+    <Compile Include="MySoalActivities\Tab_1.cs" />
+    <Compile Include="MySoalActivities\Tab_2.cs" />
+    <Compile Include="MySoalActivities\Takwim_Detail.cs" />
+    <Compile Include="MySoalActivities\Takwim_ListViewAdapter.cs" />
+    <Compile Include="MySoalActivities\Takwim_NestedRecyclerViewAdapter.cs" />
+    <Compile Include="MySoalActivities\Takwim_RecyclerViewAdapter.cs" />
+    <Compile Include="MySoalActivities\ViewPagerAdapter.cs" />
+    <Compile Include="GCMService.cs" />
+    <Compile Include="InitialStartup.cs" />
+    <Compile Include="LoginActivity.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="SQLite.Implementation.cs" />
+    <Compile Include="WebServices.cs" />
+    <Compile Include="MySoalActivities\ComposeMsg_ListPBT.cs" />
+    <Compile Include="MySoalActivities\MainActivityDW.cs" />
+    <Compile Include="MySkoolActivities\MainActivityDW.cs" />
+    <Compile Include="MyHealthActivities\MainActivityDW.cs" />
+    <Compile Include="MyKomunitiActivities\Announcement_Details.cs" />
+    <Compile Include="MyKomunitiActivities\Child_Data.cs" />
+    <Compile Include="MyKomunitiActivities\DetailInfo.cs" />
+    <Compile Include="MyKomunitiActivities\ExpandableListAdapter.cs" />
+    <Compile Include="MyKomunitiActivities\HeaderInfo.cs" />
+    <Compile Include="MyKomunitiActivities\MainActivity.cs" />
+    <Compile Include="MyKomunitiActivities\MainActivityDW.cs" />
+    <Compile Include="MyKomunitiActivities\MyLinearLayoutManager.cs" />
+    <Compile Include="MyKomunitiActivities\RecyclerViewAdapter.cs" />
+    <Compile Include="MyKomunitiActivities\SlidingTabScrollView.cs" />
+    <Compile Include="MyKomunitiActivities\SlidingTabStrip.cs" />
+    <Compile Include="MyKomunitiActivities\Tab_1.cs" />
+    <Compile Include="MyKomunitiActivities\Tab_2.cs" />
+    <Compile Include="MyKomunitiActivities\Takwim_Detail.cs" />
+    <Compile Include="MyKomunitiActivities\Takwim_ListViewAdapter.cs" />
+    <Compile Include="MyKomunitiActivities\Takwim_NestedRecyclerViewAdapter.cs" />
+    <Compile Include="MyKomunitiActivities\Takwim_RecyclerViewAdapter.cs" />
+    <Compile Include="MyKomunitiActivities\ViewPagerAdapter.cs" />
+    <Compile Include="MyVoteActivities\CropSquareTransformation.cs" />
+    <Compile Include="MyVoteActivities\DetailDialogFragment.cs" />
+    <Compile Include="MyVoteActivities\FullImageView.cs" />
+    <Compile Include="MyVoteActivities\JsonApiElement.cs" />
+    <Compile Include="MyVoteActivities\MainActivity.cs" />
+    <Compile Include="MyVoteActivities\MyVote_ChangeButton.cs" />
+    <Compile Include="MyVoteActivities\MyVote_Data.cs" />
+    <Compile Include="MyVoteActivities\MyVote_Element.cs" />
+    <Compile Include="MyVoteActivities\MyVote_VerifyVoteButton.cs" />
+    <Compile Include="MyVoteActivities\MyVote_ViewHolder.cs" />
+    <Compile Include="MyVoteActivities\MyVote_Webservices.cs" />
+    <Compile Include="MyVoteActivities\MyVote_YesOrNoDialog.cs" />
+    <Compile Include="MyVoteActivities\MyVoteMAPOAdapter.cs" />
+    <Compile Include="MyVoteActivities\SetImageBitmap.cs" />
+    <Compile Include="MyVoteActivities\SquareImageView.cs" />
+    <Compile Include="MyVoteActivities\MyVote_Const.cs" />
+    <Compile Include="ExtendedMenuActivities\Settings_MainActivity.cs" />
+    <Compile Include="ExtendedMenuActivities\AboutActivity.cs" />
+    <Compile Include="ExtendedMenuActivities\Report_MainActivity.cs" />
+    <Compile Include="MainActivityPX.cs" />
+    <Compile Include="Splash.cs" />
+    <Compile Include="ExtendedMenuActivities\ModuleSet_MainActivity.cs" />
+    <Compile Include="GeneralProgressViewHolder.cs" />
+    <Compile Include="MyShopActivities\Announcement_Details.cs" />
+    <Compile Include="MyShopActivities\Child_Data.cs" />
+    <Compile Include="MyShopActivities\DetailInfo.cs" />
+    <Compile Include="MyShopActivities\DialogSellerInfo_fragment.cs" />
+    <Compile Include="MyShopActivities\ExpandableListAdapter.cs" />
+    <Compile Include="MyShopActivities\HeaderInfo.cs" />
+    <Compile Include="MyShopActivities\List_Fragment_latestProd.cs" />
+    <Compile Include="MyShopActivities\List_Fragment_localProd.cs" />
+    <Compile Include="MyShopActivities\List_Fragment_popularProd.cs" />
+    <Compile Include="MyShopActivities\List_Fragment_reviewProd.cs" />
+    <Compile Include="MyShopActivities\MainActivityDW.cs" />
+    <Compile Include="MyShopActivities\MyLinearLayoutManager.cs" />
+    <Compile Include="MyShopActivities\Product_Details.cs" />
+    <Compile Include="MyShopActivities\Product_DetailsFrag.cs" />
+    <Compile Include="MyShopActivities\Product_Listing.cs" />
+    <Compile Include="MyShopActivities\RecyclerViewAdapter.cs" />
+    <Compile Include="MyShopActivities\SlidingTabScrollView.cs" />
+    <Compile Include="MyShopActivities\SlidingTabStrip.cs" />
+    <Compile Include="MyShopActivities\Tab_1.cs" />
+    <Compile Include="MyShopActivities\Tab_2.cs" />
+    <Compile Include="MyShopActivities\ViewPagerAdapter.cs" />
+    <Compile Include="MyShopActivities\WebService.cs" />
+    <Compile Include="MyQuizActivities\Commonlib.cs" />
+    <Compile Include="MyQuizActivities\MyQuiz_MainActivity.cs" />
+    <Compile Include="MyQuizActivities\QuestionAnswer.cs" />
+    <Compile Include="MyQuizActivities\QuestionsAnwserDB.cs" />
+    <Compile Include="MyQuizActivities\QuizDB.cs" />
+    <Compile Include="MyQuizActivities\ShowDrawCode.cs" />
+    <Compile Include="MyQuizActivities\Webservice.cs" />
+    <Compile Include="MyQuizActivities\DB\DB_access.cs" />
+    <Compile Include="MyQuizActivities\DB\DB_query.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+    <None Include="MyVoteActivities\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\d_commpic_one.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\d_commpic_three.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\d_commpic_two.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_down_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_down_grey.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_down.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_up.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_aurora.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bloodpressure.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bmi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_body.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bodymass.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bp_g1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bp_g2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bp_g3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bp_hinorm.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bp_norm.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bp_optimal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bpm.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_calendar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_clock.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_downeey.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dullheart.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_fat.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_gear_grey.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_geo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_heartrate.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_icon_send.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_infodetails.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_information.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myhealth.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_mykomuniti.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myposter.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myshop.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myskool.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_mysoal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_navigate.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_next.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_passpic_round.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pencil.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_penimbang.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pi1mlogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pulse.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_purpleheart.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_setting.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_shield.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_sign_out.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\roundedfacebw.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\undi_color.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\undi_grey.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cart2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cup2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\d_commpic_one.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\d_commpic_three.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\d_commpic_two.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\heart2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\home3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dullheart.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_infodetails.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_information.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_navigate.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_next.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_purpleheart.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\info.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\luffy.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\myskool.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\people2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\shield2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\skmm.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\skmm2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\undi_color.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\undi_grey.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\vote_like_50px.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\voteex_poster1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\voteex_poster2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\voteex_poster3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\voteex_poster4.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\blue_action_bar_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\border.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\child_row.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\child_selector.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\EditTextStyle.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\groupHeaderStyle.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\messagebackground.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\new_button.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\textbackground.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dullheart.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_infodetails.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_information.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_purpleheart.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\undi_color.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\undi_grey.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dullheart.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_infodetails.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_information.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_purpleheart.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\undi_color.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\undi_grey.png" />
+    <AndroidResource Include="Resources\layout\app_bar.axml" />
+    <AndroidResource Include="Resources\layout\DetailDialogFragment.axml">
+      <DependentUpon>FragmentVote.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\FragmentVote.axml" />
+    <AndroidResource Include="Resources\layout\FullImageView.axml">
+      <DependentUpon>FragmentVote.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ItemList.axml">
+      <DependentUpon>FragmentVote.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\MyHealth_list_group.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_list_item.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_Main.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_tab_1.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_tab_2.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_Takwim_Detail.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_TakwimListItem.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_TakwimRecyclerViewList.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_ViewListItem.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_list_group.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_list_item.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_Main.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_tab_1.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_tab_2.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_Takwim_Detail.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_TakwimListItem.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_TakwimRecyclerViewList.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_ViewListItem.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_list_group.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_list_item.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_Main.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_tab_1.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_tab_2.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_Takwim_Detail.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_TakwimListItem.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_TakwimRecyclerViewList.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_ViewListItem.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tool_bar.xml" />
+    <AndroidResource Include="Resources\layout\Dashboard_FeedCell.axml">
+      <DependentUpon>Dashboard_MainLayout.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dashboard_FeedLayout.axml">
+      <DependentUpon>Dashboard_MainLayout.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dashboard_FeedListsView.axml">
+      <DependentUpon>Dashboard_MainLayout.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dashboard_FeedTransImage.axml">
+      <DependentUpon>Dashboard_MainLayout.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dashboard_MainLayout.axml" />
+    <AndroidResource Include="Resources\layout\DashboardFeed_Cell.axml">
+      <DependentUpon>Dashboard_MainLayout.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Login_Layout.axml" />
+    <AndroidResource Include="Resources\layout\MainMenu_List.axml">
+      <DependentUpon>Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MainMenu_ListCell.axml">
+      <DependentUpon>Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_BPCardListItem.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_BPDetails.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_BPDetailsListItem.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_BPViewListItem.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_BWCardListItem.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_BWDetails.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_AnnounceDetailsLayout.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_TakwimRVMain.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_CardListItem.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_ComposeMsg.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_ComposeMsgTwo.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_MesejDihantarDetails.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_MesejDihantarRecyclerViewList.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySoal_MessageDetailsLayout.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TutorialOverlay_MainMenu.axml" />
+    <AndroidResource Include="Resources\menu\menu_composemsg.xml" />
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
+    <AndroidResource Include="Resources\menu\sub_main.xml" />
+    <AndroidResource Include="Resources\anim\slide_left_to_right.xml" />
+    <AndroidResource Include="Resources\anim\slide_right_to_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_up.xml" />
+    <AndroidResource Include="Resources\color\selector.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\values\themes.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_navigate.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_navigate.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_pficon.png" />
+    <AndroidResource Include="Resources\layout\About_Main.axml" />
+    <AndroidResource Include="Resources\layout\MySoal_ReadMoreLayout.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dashboard_FeedListViewHeader.axml">
+      <DependentUpon>Dashboard_MainLayout.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\layout\MySoal_ComposeMsgListPBTLayout.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InitialStartup.axml" />
+    <AndroidResource Include="Resources\layout\MySoal_SimpleListItemModified.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_downeey_sr.png" />
+    <AndroidResource Include="Resources\layout\MySoal_MainPager.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\Login_Layout.axml" />
+    <AndroidResource Include="Resources\layout\MySoal_DrawerMenu.axml">
+      <DependentUpon>MySoal_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MySkool_MainPager.axml" />
+    <AndroidResource Include="Resources\layout\MySkool_DrawerMenu.axml">
+      <DependentUpon>MySkool_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyHealth_MainPager.axml" />
+    <AndroidResource Include="Resources\layout\MyHealth_DrawerMenu.axml">
+      <DependentUpon>MyHealth_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_expic_andwatchx.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_expic_asustabletx.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_expic_dimanakahjejarix.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_expic_menblazerbx.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_expic_omegawatchx.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_shop_cart.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\groupHeaderStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\child_row.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_group.png" />
+    <AndroidResource Include="Resources\layout\MyKomuniti_MainPager.axml" />
+    <AndroidResource Include="Resources\layout\MyKomuniti_AnnounceDetailsLayout.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_DrawerMenu.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_list_group.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_list_item.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_Main.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_tab_1.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_tab_2.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_Takwim_Detail.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_TakwimListItem.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_TakwimRecyclerViewList.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_TakwimRVMain.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyKomuniti_ViewListItem.axml">
+      <DependentUpon>MyKomuniti_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyVote_Main.axml" />
+    <AndroidResource Include="Resources\layout\MyVote_Button.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\undi2.png" />
+    <AndroidResource Include="Resources\layout\MyVote_DetailDialogFragment.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyVote_FragmentVote.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyVote_FullImageView.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyVote_ItemList.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyVote_Toolbar.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\buttonStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\loadingbulat.xml" />
+    <AndroidResource Include="Resources\layout\MyVote_BottomProgressBar.axml">
+      <DependentUpon>MyVote_Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\batalundi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\border2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ProgressBarStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\roundedcorner.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\SignInStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\circular_loading.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\placeholder_poster.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_notification_20px.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_notification_25px.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_notification_38px.png" />
+    <AndroidResource Include="Resources\layout\Settings_MainPager.axml" />
+    <AndroidResource Include="Resources\layout\Report_MainPager.axml" />
+    <AndroidResource Include="Resources\layout-large-port\Dashboard_FeedCell.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_komuniti_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_komuniti_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_komuniti_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_komuniti_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_komuniti_icon.png" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\menu\drawer_menu.xml" />
+    <AndroidResource Include="Resources\menu\drawer_settings.xml" />
+    <AndroidResource Include="Resources\layout\Profile_MainPager.axml" />
+    <AndroidResource Include="Resources\layout\DashboardP_MainLayout.axml" />
+    <AndroidResource Include="Resources\layout\DashboardP_Header.axml" />
+    <AndroidResource Include="Resources\layout\DashboardP_Main.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Details_Border.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_bg.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_komunitilogo.png" />
+    <AndroidResource Include="Resources\layout\bottom_progressbar.xml" />
+    <AndroidResource Include="Resources\layout\Settings_ModuleSelect.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_about_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_about_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_about_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_about_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_about_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_review_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_review_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_review_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_review_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_review_48dp.png" />
+    <AndroidResource Include="Resources\layout\MyShop_MainPager.axml" />
+    <AndroidResource Include="Resources\layout\Divider.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Divider2.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Divider3.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Divider123.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\inc_MyShop_listall_viewpager.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_btmProgressbar.xml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_CardListItem.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_DrawerMenu.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_list_group.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_list_item.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_listall_fragment_list.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_listall_item.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_listall_main.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_ListProductsLayout.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_Main.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_MenuListLayout.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_navheader.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_ProductDetails.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_tab_1.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_tab_2.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_TakwimListItem.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MyShop_ViewListItem.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukKomen1.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukKomen2.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukKomen3.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukMain.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukPopular1.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukPopular2.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukPopular3.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukPopular4.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukSetempat1.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukSetempat2.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukSetempat3.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukTerbaru1.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukTerbaru2.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukTerbaru3.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProdukTerbaru4.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\seller_info.axml">
+      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\product_placeholder.jpg" />
+    <AndroidResource Include="Resources\menu\drawer_view.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_person.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btnMyshop.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\btnMyshop2.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cart.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dashboard.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_event.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_headset.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_forum.png" />
+    <AndroidResource Include="Resources\anim\slide_right.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myshop_front.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\background3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\banner2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\correct1.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboardlogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\quizicon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\quizicon2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\wrong2.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\betulStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\edittextStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\EmptyXmlFilebuttonStyle.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\salahStyle.xml" />
+    <AndroidResource Include="Resources\layout\betul.axml" />
+    <AndroidResource Include="Resources\layout\Main2.axml" />
+    <AndroidResource Include="Resources\layout\MyQuiz_MainActivity.axml" />
+    <AndroidResource Include="Resources\layout\showdrawcode.axml" />
+    <AndroidResource Include="Resources\layout\soalan.axml" />
+    <AndroidResource Include="Resources\layout-large-port\betul.axml" />
+    <AndroidResource Include="Resources\layout-large-port\Main2.axml" />
+    <AndroidResource Include="Resources\layout-large-port\MyQuiz_MainActivity.axml" />
+    <AndroidResource Include="Resources\layout-large-port\soalan.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dbkomunitiico.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dbkomuniti512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout\" />
+    <Folder Include="MyHealthActivities\" />
+    <Folder Include="MySkoolActivities\" />
+    <Folder Include="MySoalActivities\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\anim\" />
+    <Folder Include="Resources\color\" />
+    <Folder Include="Assets\Fonts\" />
+    <Folder Include="MyKomunitiActivities\" />
+    <Folder Include="MyVoteActivities\" />
+    <Folder Include="ExtendedMenuActivities\" />
+    <Folder Include="MyShopActivities\" />
+    <Folder Include="MyQuizActivities\" />
+    <Folder Include="MyQuizActivities\DB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7cardview">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7recyclerview">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="fab">
+      <Version>1.3.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="square.picasso">
+      <Version>2.5.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportdesign">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="MultiImageView">
+      <Version>1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="flipnumbers">
+      <Version>1.1.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Gcm.Client\Gcm.Client.csproj">
+      <Project>{D8830D3D-13F5-423F-9E98-54E9CE215430}</Project>
+      <Name>Gcm.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PI1M_Dashboard\PI1M_Dashboard.csproj">
+      <Project>{1F777594-4D3D-4479-A927-25D380ECE3F7}</Project>
+      <Name>PI1M_Dashboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Downloads\RippleEffect-master\RippleEffect-master\RippleView\RippleView.csproj">
+      <Project>{5D8338E2-BD57-469F-AC2C-4E103079C54F}</Project>
+      <Name>RippleView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\Roboto-Black.ttf" />
+    <AndroidAsset Include="Assets\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

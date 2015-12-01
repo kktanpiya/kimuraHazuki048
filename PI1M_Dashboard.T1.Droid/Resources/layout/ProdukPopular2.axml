@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    cardview:cardElevation="4dp"
+    cardview:cardCornerRadius="5dp"
+    android:id="@+id/ProdukPopular2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:id="@+id/rl_ProdukPopular2">
+        <ImageView
+            android:id="@+id/ivMST1PPTile2ProdPic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/product_placeholder" />
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivMST1PPTile2ProdPic"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/center"
+            android:orientation="vertical"
+            android:background="#77000000">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivMST1PPTile2ProdPic"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/center"
+                android:paddingLeft="8dip"
+                android:text="RM 500"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:id="@+id/tvMST1PPTile2ProdPrice" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dip"
+                android:text="Dimension 10 (tablet minda)"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:id="@+id/tvMST1PPTile2ProdName"
+                android:layout_gravity="center"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

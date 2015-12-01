@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jOa-M7-vIY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="6Aw-mA-K45">
+            <objects>
+                <viewController storyboardIdentifier="loginvcontroller" id="jOa-M7-vIY" customClass="LoginVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UVj-Rd-Nis"/>
+                        <viewControllerLayoutGuide type="bottom" id="P31-LR-tjG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aIx-Si-bVh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2c9-Iy-h8N">
+                                <rect key="frame" x="16" y="28" width="288" height="520"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Pengguna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPo-Af-Bh0">
+                                        <rect key="frame" x="8" y="243" width="272" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombor Kad Pengenalan anda" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-u0-QAf">
+                                        <rect key="frame" x="8" y="272" width="272" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kata Laluan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qp-JB-G6C">
+                                        <rect key="frame" x="8" y="333" width="272" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Laluan anda" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvX-b8-jqu">
+                                        <rect key="frame" x="8" y="362" width="272" height="30"/>
+                                        <animations/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVO-eN-Vkt">
+                                        <rect key="frame" x="8" y="432" width="272" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Log Masuk">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_pi1mlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="olX-Z0-CFf">
+                                        <rect key="frame" x="-16" y="41" width="320" height="111"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-KK-KtH">
+                                <rect key="frame" x="16" y="24" width="288" height="520"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="d6o-6u-D6m">
+                                        <rect key="frame" x="134" y="250" width="20" height="20"/>
+                                        <animations/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sedang memuatkan..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGQ-XM-Feh">
+                                        <rect key="frame" x="8" y="278" width="272" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginFormView" destination="2c9-Iy-h8N" id="name-outlet-2c9-Iy-h8N"/>
+                        <outlet property="uiaivLoadIndicator" destination="d6o-6u-D6m" id="name-outlet-d6o-6u-D6m"/>
+                        <outlet property="uibLoginBtn" destination="HVO-eN-Vkt" id="name-outlet-HVO-eN-Vkt"/>
+                        <outlet property="uitfPass" destination="zvX-b8-jqu" id="name-outlet-zvX-b8-jqu"/>
+                        <outlet property="uitfUsername" destination="sjv-u0-QAf" id="name-outlet-sjv-u0-QAf"/>
+                        <outlet property="vLoginIndicator" destination="HJk-KK-KtH" id="name-outlet-HJk-KK-KtH"/>
+                        <segue destination="1C5-KF-Z7a" kind="push" id="D3V-iT-boL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIT-ni-GVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="331"/>
+        </scene>
+        <!--Main MenuXDVC-->
+        <scene sceneID="UZX-tr-Qg0">
+            <objects>
+                <viewController storyboardIdentifier="mainmenuxdvcontroller" id="1C5-KF-Z7a" customClass="MainMenuXDVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="afj-N4-Y8r"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ar9-aR-vxl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z4x-sx-ULp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BbA-qV-Lu8"/>
+                    <connections>
+                        <segue destination="QTg-S7-KrE" kind="push" id="PmJ-oP-nh4"/>
+                        <segue destination="wX8-6e-CgN" kind="push" id="XKZ-LF-k3X"/>
+                        <segue destination="tb9-qT-3Ed" kind="push" id="4i6-hE-q6R"/>
+                        <segue destination="vHk-Pc-Vwf" kind="push" id="dEB-k6-buo"/>
+                        <segue destination="iXq-w9-6Uh" kind="push" id="TLJ-Zl-Wh9"/>
+                        <segue destination="RSc-OO-zqW" kind="push" id="qJu-Jn-Yy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYU-CA-L6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1cM-En-3rh">
+            <objects>
+                <viewController id="RSc-OO-zqW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dzu-HR-1Zu"/>
+                        <viewControllerLayoutGuide type="bottom" id="bug-tf-MCF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Gb-yl-fIf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-9l-Jiv">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="MyKomuniti"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWB-1C-BpR">
+                                <rect key="frame" x="160" y="0.0" width="160" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Takwim"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="68i-R7-xDG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCu-3J-QNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="-964"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L8M-hW-RGJ">
+            <objects>
+                <viewController id="QTg-S7-KrE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QiA-D7-AGr"/>
+                        <viewControllerLayoutGuide type="bottom" id="EA4-4N-R6D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mgg-Yc-SNh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A4x-lA-xPV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ZA-bk-zXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="-321"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qbl-5z-IoM">
+            <objects>
+                <viewController id="wX8-6e-CgN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Whw-5a-VgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="DD0-b4-rsd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uaQ-wv-c1N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qh0-c3-Fwi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unm-po-EGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NTM-xc-14B">
+            <objects>
+                <viewController id="iXq-w9-6Uh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K9A-L8-AQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Qa-SM-ofo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xJ8-q8-IdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tsc-9d-ZWg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHk-jm-gwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="2292"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6zD-u7-hjy">
+            <objects>
+                <viewController id="tb9-qT-3Ed" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y2a-cU-6Kz"/>
+                        <viewControllerLayoutGuide type="bottom" id="lfG-Uw-FUJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kEY-CY-c5v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iPw-rp-jgd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hz0-bZ-atX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="990"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nnp-SM-OEx">
+            <objects>
+                <viewController id="vHk-Pc-Vwf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZGR-65-xDj"/>
+                        <viewControllerLayoutGuide type="bottom" id="7ei-6Y-Kud"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EU5-Le-1Uc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QrR-TP-5aw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxC-nh-G6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="1643"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_pi1mlogo.png" width="427" height="207"/>
+    </resources>
+</document>

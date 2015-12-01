@@ -1,0 +1,4 @@
+anim/zoom.xml;anim/zoom.xml
+values/colors.xml;values/colors.xml
+values/attrs.xml;values/attrs.xml
+drawable/shape_rounded.xml;drawable/shape_rounded.xml

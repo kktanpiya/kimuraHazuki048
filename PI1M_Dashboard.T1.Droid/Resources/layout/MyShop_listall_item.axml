@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="3dp"
+        android:orientation="vertical"
+        android:background="@android:color/background_light"
+        android:weightSum="100"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_below="@+id/app_bar">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout2"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="16dp"
+                android:gravity="top"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:src="@drawable/product_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/prodImage" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout3"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout4"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/linearLayout6"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:text="RM 500"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:id="@+id/txtPrice"
+                            android:textSize="16dp"
+                            android:textColor="#9B2BAE" />
+                        <TextView
+                            android:text="Luxury Watch"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:id="@+id/txtProdName"
+                            android:textSize="14dp"
+                            android:textColor="#212121" />
+                        <TextView
+                            android:text="In Stock"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:id="@+id/txtInStock"
+                            android:textSize="14dp"
+                            android:textColor="#ff4caf50" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/linearLayout7"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:text="9 Jan 2015"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtProdDate"
+                            android:textSize="10dp"
+                            android:textColor="#ff757575" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

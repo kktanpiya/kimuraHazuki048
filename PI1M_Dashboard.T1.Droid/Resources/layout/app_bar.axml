@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:p1="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    p1:id="@+id/app_bar"
+    p1:layout_width="match_parent"
+    p1:layout_height="wrap_content"
+    p1:minHeight="?attr/actionBarSize"
+    p1:background="#488FCC"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    p1:paddingTop="24dp" />
