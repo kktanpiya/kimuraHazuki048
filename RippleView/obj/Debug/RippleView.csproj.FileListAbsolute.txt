@@ -13,5 +13,5 @@ C:\Users\MSD Hainizam\Downloads\RippleEffect-master\RippleEffect-master\RippleVi
 C:\Users\MSD Hainizam\Downloads\RippleEffect-master\RippleEffect-master\RippleView\obj\Debug\uploadflags.txt
 C:\Users\MSD Hainizam\Downloads\RippleEffect-master\RippleEffect-master\RippleView\obj\Debug\Cheesebaron.RippleEffect.dll.mdb
 C:\Users\MSD Hainizam\Downloads\RippleEffect-master\RippleEffect-master\RippleView\bin\Debug\Cheesebaron.RippleEffect.dll.mdb
-C:\Users\MSD Hainizam\Downloads\RippleEffect-master\RippleEffect-master\RippleView\obj\Debug\Cheesebaron.RippleEffect.dll.mdb
-C:\Users\MSD Hainizam\Downloads\RippleEffect-master\RippleEffect-master\RippleView\bin\Debug\Cheesebaron.RippleEffect.dll.mdb
+C:\Users\MSD Hainizam\Documents\GitHub\kimuraHazuki048\RippleView\obj\Debug\Cheesebaron.RippleEffect.dll
+C:\Users\MSD Hainizam\Documents\GitHub\kimuraHazuki048\RippleView\obj\Debug\Cheesebaron.RippleEffect.pdb
