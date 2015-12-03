@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#ignore this folder
+PI1M_Dashboard.T1.Droid/bin/
+PI1M_Dashboard.T1.Droid/obj/
+RippleView/obj/
