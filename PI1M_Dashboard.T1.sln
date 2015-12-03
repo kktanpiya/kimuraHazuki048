@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PI1M_Dashboard.IOS", "PI1M_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PI1M_Dashboard.IOS.UITests", "PI1M_Dashboard.IOS.UITests\PI1M_Dashboard.IOS.UITests.csproj", "{2EF2B0D4-9C65-4ECC-9E66-E78FAF9E9F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RippleView", "..\..\..\Downloads\RippleEffect-master\RippleEffect-master\RippleView\RippleView.csproj", "{5D8338E2-BD57-469F-AC2C-4E103079C54F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RippleView", "RippleView\RippleView.csproj", "{5D8338E2-BD57-469F-AC2C-4E103079C54F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

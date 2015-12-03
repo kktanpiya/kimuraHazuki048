@@ -2177,94 +2177,97 @@ namespace PI1M_Dashboard.T1.Droid
 			public const int messagebackground = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int myskool = 2130837670;
+			public const int monoandroidsplash = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int new_button = 2130837671;
-			
-			// aapt resource value: 0x7f0200c3
-			public const int notification_template_icon_bg = 2130837699;
+			public const int myskool = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int people2 = 2130837672;
+			public const int new_button = 2130837672;
+			
+			// aapt resource value: 0x7f0200c4
+			public const int notification_template_icon_bg = 2130837700;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int placeholder_poster = 2130837673;
+			public const int people2 = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int product_placeholder = 2130837674;
+			public const int placeholder_poster = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ProgressBarStyle = 2130837675;
+			public const int product_placeholder = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int quizicon = 2130837676;
+			public const int ProgressBarStyle = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int quizicon2 = 2130837677;
+			public const int quizicon = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int roundedcorner = 2130837678;
+			public const int quizicon2 = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int roundedfacebw = 2130837679;
+			public const int roundedcorner = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int salahStyle = 2130837680;
+			public const int roundedfacebw = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int shape_rounded = 2130837681;
+			public const int salahStyle = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int shield2 = 2130837682;
+			public const int shape_rounded = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int SignInStyle = 2130837683;
+			public const int shield2 = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int skmm = 2130837684;
+			public const int SignInStyle = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int skmm2 = 2130837685;
+			public const int skmm = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int slider_blt_grn = 2130837686;
+			public const int skmm2 = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int slider_blt_trans = 2130837687;
+			public const int slider_blt_grn = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int snackbar_background = 2130837688;
+			public const int slider_blt_trans = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int textbackground = 2130837689;
+			public const int snackbar_background = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int undi2 = 2130837690;
+			public const int textbackground = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int undi_color = 2130837691;
+			public const int undi2 = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int undi_grey = 2130837692;
+			public const int undi_color = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int vote_like_50px = 2130837693;
+			public const int undi_grey = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int voteex_poster1 = 2130837694;
+			public const int vote_like_50px = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int voteex_poster2 = 2130837695;
+			public const int voteex_poster1 = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int voteex_poster3 = 2130837696;
+			public const int voteex_poster2 = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int voteex_poster4 = 2130837697;
+			public const int voteex_poster3 = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int wrong2 = 2130837698;
+			public const int voteex_poster4 = 2130837698;
+			
+			// aapt resource value: 0x7f0200c3
+			public const int wrong2 = 2130837699;
 			
 			static Drawable()
 			{
@@ -5344,20 +5347,23 @@ namespace PI1M_Dashboard.T1.Droid
 			// aapt resource value: 0x7f080002
 			public const int CardView_Light = 2131230722;
 			
-			// aapt resource value: 0x7f08013c
-			public const int CustomActionBarTheme = 2131231036;
-			
 			// aapt resource value: 0x7f08013d
-			public const int CustomActionBarTheme_Base = 2131231037;
+			public const int CustomActionBarTheme = 2131231037;
+			
+			// aapt resource value: 0x7f08013e
+			public const int CustomActionBarTheme_Base = 2131231038;
+			
+			// aapt resource value: 0x7f08013c
+			public const int Mono_Android_Theme_Splash = 2131231036;
+			
+			// aapt resource value: 0x7f080142
+			public const int MyApp_ActionBar = 2131231042;
 			
 			// aapt resource value: 0x7f080141
-			public const int MyApp_ActionBar = 2131231041;
+			public const int MyAppActionBarTheme = 2131231041;
 			
 			// aapt resource value: 0x7f080140
-			public const int MyAppActionBarTheme = 2131231040;
-			
-			// aapt resource value: 0x7f08013f
-			public const int NoActionBarLayout = 2131231039;
+			public const int NoActionBarLayout = 2131231040;
 			
 			// aapt resource value: 0x7f080023
 			public const int Platform_AppCompat = 2131230755;
@@ -5656,8 +5662,8 @@ namespace PI1M_Dashboard.T1.Droid
 			// aapt resource value: 0x7f0800f5
 			public const int ThemeOverlay_AppCompat_Light = 2131230965;
 			
-			// aapt resource value: 0x7f08013e
-			public const int TranslucentLayout = 2131231038;
+			// aapt resource value: 0x7f08013f
+			public const int TranslucentLayout = 2131231039;
 			
 			// aapt resource value: 0x7f0800f6
 			public const int Widget_AppCompat_ActionBar = 2131230966;

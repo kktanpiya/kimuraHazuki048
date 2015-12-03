@@ -1,6 +1,27 @@
-﻿<Properties StartupItem="PI1M_Dashboard.T1.Droid\PI1M_Dashboard.T1.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android_3.7" />
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupItem="PI1M_Dashboard.T1.Droid/PI1M_Dashboard.T1.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PI1M_Dashboard.T1.Droid/MyShopActivities/Tab_1.cs">
+    <Files>
+      <File FileName="../../../Downloads/SearchView-Sample-master/SearchViewSample/ChemicalsAdapter.cs" Line="18" Column="44" />
+      <File FileName="../../../Downloads/SearchView-Sample-master/SearchViewSample/Webservice.cs" Line="15" Column="81" />
+      <File FileName="PI1M_Dashboard.T1.Droid/MyShopActivities/Tab_1.cs" Line="492" Column="31" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PI1M_Dashboard.T1" expanded="True">
+            <Node name="PI1M_Dashboard.T1.Droid" expanded="True">
+              <Node name="MyShopActivities" expanded="True">
+                <Node name="Tab_1.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="RippleView" expanded="True" />
+          </Node>
+          <Node />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
