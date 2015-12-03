@@ -216,7 +216,6 @@
     <Compile Include="MyShopActivities\MainActivityDW.cs" />
     <Compile Include="MyShopActivities\MyLinearLayoutManager.cs" />
     <Compile Include="MyShopActivities\Product_Details.cs" />
-    <Compile Include="MyShopActivities\Product_DetailsFrag.cs" />
     <Compile Include="MyShopActivities\Product_Listing.cs" />
     <Compile Include="MyShopActivities\RecyclerViewAdapter.cs" />
     <Compile Include="MyShopActivities\SlidingTabScrollView.cs" />
