@@ -49,6 +49,9 @@ Temporary Items
 #ignore this folder
 PI1M_Dashboard.T1.Droid/bin/
 PI1M_Dashboard.T1.Droid/obj/
+PI1M_Dashboard.T1.Droid/Gcm.Client/bin/
+PI1M_Dashboard.T1.Droid/Gcm.Client/obj/
 RippleView/obj/
-PI1M_Dashboard.IOS/bin/
+RippleView/bin/
 PI1M_Dashboard.IOS/obj/
+PI1M_Dashboard.IOS/bin/
