@@ -98,6 +98,7 @@
     <Reference Include="Refractored.PagerSlidingTabStrip">
       <HintPath>..\packages\Refractored.PagerSlidingTabStrip.1.0.9\lib\MonoAndroid10\Refractored.PagerSlidingTabStrip.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -236,6 +237,10 @@
     <Compile Include="MyQuizActivities\Webservice.cs" />
     <Compile Include="MyQuizActivities\DB\DB_access.cs" />
     <Compile Include="MyQuizActivities\DB\DB_query.cs" />
+    <Compile Include="MyShopActivities\ImageSlider_Fragment.cs" />
+    <Compile Include="MyShopActivities\ImageSlider_oriImage.cs" />
+    <Compile Include="MyShopActivities\Library\CirclePageIndicator.cs" />
+    <Compile Include="MyShopActivities\Library\PageIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -815,6 +820,12 @@
     <AndroidResource Include="Resources\layout-large-port\soalan.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_dbkomunitiico.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_dbkomuniti512.png" />
+    <AndroidResource Include="Resources\layout\fragment_card.axml" />
+    <AndroidResource Include="Resources\layout\popup.xml" />
+    <AndroidResource Include="Resources\values\vpi__attrs.xml" />
+    <AndroidResource Include="Resources\values\vpi__colors.xml" />
+    <AndroidResource Include="Resources\values\vpi__defaults.xml" />
+    <AndroidResource Include="Resources\values\vpi__styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />

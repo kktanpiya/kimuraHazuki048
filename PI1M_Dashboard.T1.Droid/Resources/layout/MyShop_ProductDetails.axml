@@ -44,15 +44,34 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="30"
                         android:layout_margin="1dp">
-                        <Macaw.UIComponents.MultiImageView
-                            android:layout_marginTop="8dp"
-                            android:src="@drawable/product_placeholder"
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="250dp"
-                            android:id="@+id/productImage"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginLeft="11dp"
-                            android:layout_marginRight="11dp" />
+                            android:layout_height="300dp">
+                        <!--                            <ProgressBar
+					                    android:layout_width="wrap_content"
+					                    android:layout_height="wrap_content"
+					                    android:id="@+id/pb_loadingImage"
+					                    android:background="@drawable/circular_loading"
+					                    android:layout_centerInParent="true"
+					                    style="@android:attr/progressBarStyleLarge" />
+                            	 -->
+                            <com.refractored.PagerSlidingTabStrip
+                                android:id="@+id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize" />
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                tools:context=".MainActivity" />
+                            <viewpagerindicator.CirclePageIndicator
+                                android:id="@+id/indicator"
+                                android:padding="10dip"
+                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent" />
+                        </LinearLayout>
                         <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="fill_parent"
