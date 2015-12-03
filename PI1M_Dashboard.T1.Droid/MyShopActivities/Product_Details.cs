@@ -21,6 +21,8 @@ using Android.Support.V4.View;
 using Android.Support.V4.App;
 using myShopDescription;
 using drawer_navigation;
+using com.refractored;
+using ViewPagerIndicator;
 
 
 namespace PI1M_Dashboard.T1.Droid
@@ -70,14 +72,13 @@ namespace PI1M_Dashboard.T1.Droid
 			progress.Show();
 
 
-			productImage = FindViewById<MultiImageView>(Resource.Id.productImage);
 			tv_price = FindViewById <TextView> (Resource.Id.tv_price);
 			tv_prodTitle = FindViewById <TextView> (Resource.Id.tv_prodTitle);
 			wv_prodDesc = FindViewById <WebView> (Resource.Id.wv_prodDesc);
-//			btn_addToCart = FindViewById <Button> (Resource.Id.btn_addToCart);
+			//			btn_addToCart = FindViewById <Button> (Resource.Id.btn_addToCart);
 			btn_sellerInfo = FindViewById <Button> (Resource.Id.btn_sellerInfo);
 
-     		var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
+			var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
 			SetSupportActionBar (toolbar);
 			toolbar.SetBackgroundColor (Color.ParseColor ("#9C27B0"));
 
@@ -86,9 +87,9 @@ namespace PI1M_Dashboard.T1.Droid
 
 
 			//call addToCart method
-//			btn_addToCart.Click += (sender, e) => {
-//				addToCart();
-//			};
+			//			btn_addToCart.Click += (sender, e) => {
+			//				addToCart();
+			//			};
 
 			btn_sellerInfo.Click += btnSellerInfo_click;
 
@@ -99,16 +100,15 @@ namespace PI1M_Dashboard.T1.Droid
 		protected override void OnDestroy()
 		{
 			base.OnDestroy ();
-			productImage.ClearImageCache ();
 		}
 
 
-//		public override bool OnCreateOptionsMenu (IMenu menu) 
-//		{
-//			MenuInflater.Inflate(Resource.Menu.product_detail, menu);
-//			IMenuItem item = menu.FindItem (Resource.Id.menu_cart);
-//			return true;
-//		}
+		//		public override bool OnCreateOptionsMenu (IMenu menu) 
+		//		{
+		//			MenuInflater.Inflate(Resource.Menu.product_detail, menu);
+		//			IMenuItem item = menu.FindItem (Resource.Id.menu_cart);
+		//			return true;
+		//		}
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
@@ -129,7 +129,9 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 			//after completed task
 			setupData();
-			imageSlider ();
+			setupImageSlider ();
+
+			progress.Dismiss();
 		}
 
 		void worker_DoWork (object sender, DoWorkEventArgs ea)
@@ -139,7 +141,7 @@ namespace PI1M_Dashboard.T1.Droid
 				Console.Error.WriteLine ("masukiniii");
 				return;
 			}
-		
+
 			jsonProdDetail = MyShop_WebService.GetJsonProductDetail (product_id);
 			prodDetails = JsonConvert.DeserializeObject <MyShop_WebService.ProductDetails> (jsonProdDetail);
 		}
@@ -153,44 +155,35 @@ namespace PI1M_Dashboard.T1.Droid
 			dialog.Show (transaction, "dialog fragment");
 		}
 
-		private void imageSlider()
+
+		private void setupImageSlider()
 		{
+			ViewPager pager;
+			PagerSlidingTabStrip tabs;
 
-			// Sets images for the slider icons and their size
-			productImage.SliderSelectedIcon = BitmapFactory.DecodeResource(Resources, Resource.Drawable.slider_blt_grn);
-			productImage.SliderUnselectedIcon = BitmapFactory.DecodeResource(Resources, Resource.Drawable.slider_blt_trans);
-			productImage.SetSliderIconDimensions(20, 20);
-
-			productImage.DownloadedImageSampleSize = 1;
-
-			List<String> list = new List<string> ();
+			List<String> listImagethumbs = new List<string> ();
+			List<String> listImageOri = new List<string> ();
 
 			foreach (var temp in prodDetails.photos) 
 			{
-				list.Add ("http://myshop.pi1m.my/productImage/thumbs_dashboard/"+temp.name);
+				listImagethumbs.Add ("http://myshop.pi1m.my/productImage/thumbs_dashboard/"+temp.name);
+				listImageOri.Add ("http://myshop.pi1m.my/productImage/original/"+temp.name);
 
 			}
 
-			productImage.LoadImageList(list.ToArray());
+			ImagePagerAdapter adapter = new ImagePagerAdapter(SupportFragmentManager, listImagethumbs, listImageOri);
+			adapter.NotifyDataSetChanged ();
+			pager = FindViewById<ViewPager> (Resource.Id.pager);
+			tabs = FindViewById<PagerSlidingTabStrip> (Resource.Id.tabs);
+			pager.Adapter = adapter;
+			tabs.Visibility = ViewStates.Gone;
+			tabs.SetViewPager (pager);
 
-
-//			int x = 0;
-
-			productImage.ImagesLoaded += (sender, e) =>
-			{   
-				// Loads the first image in the list
-				RunOnUiThread(productImage.LoadImage);
-				//dismiss loading after image loaded
-//				Console.Error.WriteLine("x"+x);
-//				if(x == (list.Count-1))
-//				{
-//				}
-//				x++;
-				progress.Dismiss();
-
-			};
-//			progress.Dismiss();
-
+			//if image more than 1, show slider indicator
+			if (listImagethumbs.Count > 1) { 
+				PageIndicator mIndicator = FindViewById<CirclePageIndicator> (Resource.Id.indicator);
+				mIndicator.SetViewPager (pager);
+			}
 
 		}
 
@@ -207,7 +200,6 @@ namespace PI1M_Dashboard.T1.Droid
 			string cssStyle="<style>img{display: inline;height: auto;max-width: 100%;}</style>";
 			string prodDesc = cssStyle+"<html><body>"+prodDetails.description.Replace("\r\n", "<br/>")+"</body></html>";
 
-
 			prodDesc = "<html><body>"+prodDesc.Replace("../../../", "")+"</body></html>";
 			prodDesc = "<html><body>"+prodDesc.Replace("textImages/", "/textImages/")+"</body></html>";
 			prodDesc = "<html><body>"+prodDesc.Replace("/textImages/", "http://myshop.pi1m.my/textImages/")+"</body></html>";
@@ -216,8 +208,8 @@ namespace PI1M_Dashboard.T1.Droid
 			wv_prodDesc.Settings.JavaScriptEnabled = true;
 			wv_prodDesc.Settings.BuiltInZoomControls = true;
 			wv_prodDesc.Settings.UseWideViewPort = false;	
-//			wv_prodDesc.SetInitialScale (1);
-//			wv_prodDesc.Settings.UserAgentString = (ua);
+			//			wv_prodDesc.SetInitialScale (1);
+			//			wv_prodDesc.Settings.UserAgentString = (ua);
 			Console.Error.WriteLine("test"+prodDesc);
 			wv_prodDesc.LoadDataWithBaseURL ("", 
 				prodDesc, 
@@ -229,8 +221,35 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 			Toast.MakeText (this, "Item telah ditambahkan ke dalam bakul", ToastLength.Short).Show();	
 		}
-			
-	
+	}
+
+	public class ImagePagerAdapter : FragmentPagerAdapter{
+		private List<string> listImageThumbsUrl = new List<string>();
+		private List<string> listImageOriUrl = new List<string>();
+
+		public ImagePagerAdapter(Android.Support.V4.App.FragmentManager fm, List<string> listImageThumbsUrl, List<string> listImageOriUrl) : base(fm)
+		{
+			this.listImageThumbsUrl = listImageThumbsUrl;
+			this.listImageOriUrl = listImageOriUrl;
+		}
+
+		public override Java.Lang.ICharSequence GetPageTitleFormatted (int position)
+		{
+			return new Java.Lang.String (listImageThumbsUrl [position]);
+		}
+		#region implemented abstract members of PagerAdapter
+		public override int Count {
+			get {
+				return listImageThumbsUrl.Count;
+			}
+		}
+		#endregion
+		#region implemented abstract members of FragmentPagerAdapter
+		public override Android.Support.V4.App.Fragment GetItem (int position)
+		{
+			return ImageSlider_Fragment.NewInstance (position, listImageThumbsUrl, listImageOriUrl);
+		}
+		#endregion
 	}
 }
 
