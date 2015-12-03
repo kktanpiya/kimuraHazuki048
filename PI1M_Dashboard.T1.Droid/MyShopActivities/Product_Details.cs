@@ -207,9 +207,12 @@ namespace PI1M_Dashboard.T1.Droid
 			string cssStyle="<style>img{display: inline;height: auto;max-width: 100%;}</style>";
 			string prodDesc = cssStyle+"<html><body>"+prodDetails.description.Replace("\r\n", "<br/>")+"</body></html>";
 
-			prodDesc = "<html><body>"+prodDesc.Replace("../../../", "http://myshop.pi1m.my/textImages")+"</body></html>";
 
-			prodDesc = "<html><body>"+prodDesc.Replace("/textImages", "http://myshop.pi1m.my/textImages")+"</body></html>";
+			prodDesc = "<html><body>"+prodDesc.Replace("../../../", "")+"</body></html>";
+			prodDesc = "<html><body>"+prodDesc.Replace("textImages/", "/textImages/")+"</body></html>";
+			prodDesc = "<html><body>"+prodDesc.Replace("/textImages/", "http://myshop.pi1m.my/textImages/")+"</body></html>";
+			prodDesc = "<html><body>"+prodDesc.Replace("/http://", "http://");
+
 			wv_prodDesc.Settings.JavaScriptEnabled = true;
 			wv_prodDesc.Settings.BuiltInZoomControls = true;
 			wv_prodDesc.Settings.UseWideViewPort = false;	
