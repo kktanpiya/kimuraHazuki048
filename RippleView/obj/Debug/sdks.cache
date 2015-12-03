@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Sdk>
-  <AndroidApiLevel>23</AndroidApiLevel>
-  <AndroidApiLevelName>23</AndroidApiLevelName>
-  <AndroidNdkPath>/Users/hafiz/Library/Developer/Xamarin/android-ndk/android-ndk-r10d</AndroidNdkPath>
-  <AndroidSdkBuildToolsPath>/Users/hafiz/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</AndroidSdkBuildToolsPath>
-  <AndroidSdkBuildToolsBinPath>/Users/hafiz/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</AndroidSdkBuildToolsBinPath>
-  <AndroidSdkPath>/Users/hafiz/Library/Developer/Xamarin/android-sdk-macosx</AndroidSdkPath>
-  <JavaSdkPath>/usr</JavaSdkPath>
-  <MonoAndroidBinPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/bin</MonoAndroidBinPath>
-  <MonoAndroidToolsPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid</MonoAndroidToolsPath>
+  <AndroidApiLevel>22</AndroidApiLevel>
+  <AndroidApiLevelName>22</AndroidApiLevelName>
+  <AndroidNdkPath>C:\Users\MSD Hainizam\Documents\Android\ndk\android-ndk-r10d</AndroidNdkPath>
+  <AndroidSdkBuildToolsPath>C:\Users\MSD Hainizam\AppData\Local\Android\android-sdk\build-tools\21.1.1</AndroidSdkBuildToolsPath>
+  <AndroidSdkBuildToolsBinPath>C:\Users\MSD Hainizam\AppData\Local\Android\android-sdk\build-tools\21.1.1</AndroidSdkBuildToolsBinPath>
+  <AndroidSdkPath>C:\Users\MSD Hainizam\AppData\Local\Android\android-sdk</AndroidSdkPath>
+  <JavaSdkPath>C:\Program Files (x86)\Java\jdk1.7.0_71</JavaSdkPath>
+  <MonoAndroidBinPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidBinPath>
+  <MonoAndroidToolsPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidToolsPath>
   <ReferenceAssemblyPaths>
-    <ReferenceAssemblyPath>/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0</ReferenceAssemblyPath>
+    <ReferenceAssemblyPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\</ReferenceAssemblyPath>
   </ReferenceAssemblyPaths>
-  <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
-  <ZipAlignPath>/Users/hafiz/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</ZipAlignPath>
+  <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+  <ZipAlignPath>C:\Users\MSD Hainizam\AppData\Local\Android\android-sdk\build-tools\21.1.1</ZipAlignPath>
   <MonoAndroidIncludePath />
-  <SupportedApiLevel>23</SupportedApiLevel>
+  <SupportedApiLevel>22</SupportedApiLevel>
   <AndroidSequencePointsMode>None</AndroidSequencePointsMode>
 </Sdk>
