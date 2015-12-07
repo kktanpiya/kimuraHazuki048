@@ -214,13 +214,11 @@
     <Compile Include="MyShopActivities\ExpandableListAdapter.cs" />
     <Compile Include="MyShopActivities\HeaderInfo.cs" />
     <Compile Include="MyShopActivities\List_Fragment_latestProd.cs" />
-    <Compile Include="MyShopActivities\List_Fragment_localProd.cs" />
     <Compile Include="MyShopActivities\List_Fragment_popularProd.cs" />
     <Compile Include="MyShopActivities\List_Fragment_reviewProd.cs" />
     <Compile Include="MyShopActivities\MainActivityDW.cs" />
     <Compile Include="MyShopActivities\MyLinearLayoutManager.cs" />
     <Compile Include="MyShopActivities\Product_Details.cs" />
-    <Compile Include="MyShopActivities\Product_Listing.cs" />
     <Compile Include="MyShopActivities\RecyclerViewAdapter.cs" />
     <Compile Include="MyShopActivities\SlidingTabScrollView.cs" />
     <Compile Include="MyShopActivities\SlidingTabStrip.cs" />
@@ -241,6 +239,8 @@
     <Compile Include="MyShopActivities\ImageSlider_oriImage.cs" />
     <Compile Include="MyShopActivities\Library\CirclePageIndicator.cs" />
     <Compile Include="MyShopActivities\Library\PageIndicator.cs" />
+    <Compile Include="MyShopActivities\Product_RecyclerViewAdapter.cs" />
+    <Compile Include="MyShopActivities\Product_Listing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -702,9 +702,6 @@
     <AndroidResource Include="Resources\layout\MyShop_list_item.axml">
       <DependentUpon>MyShop_MainPager.axml</DependentUpon>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\MyShop_listall_fragment_list.axml">
-      <DependentUpon>MyShop_MainPager.axml</DependentUpon>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\MyShop_listall_item.axml">
       <DependentUpon>MyShop_MainPager.axml</DependentUpon>
     </AndroidResource>
@@ -826,6 +823,8 @@
     <AndroidResource Include="Resources\values\vpi__colors.xml" />
     <AndroidResource Include="Resources\values\vpi__defaults.xml" />
     <AndroidResource Include="Resources\values\vpi__styles.xml" />
+    <AndroidResource Include="Resources\menu\menu_myshop.xml" />
+    <AndroidResource Include="Resources\layout\MyShop_listall_fragment_list.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />

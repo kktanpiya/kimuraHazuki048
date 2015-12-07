@@ -2690,6 +2690,9 @@ namespace PI1M_Dashboard.T1.Droid
 			// aapt resource value: 0x7f060044
 			public const int action_mode_close_button = 2131099716;
 			
+			// aapt resource value: 0x7f060244
+			public const int action_search = 2131100228;
+			
 			// aapt resource value: 0x7f060241
 			public const int action_settings = 2131100225;
 			
@@ -4962,7 +4965,10 @@ namespace PI1M_Dashboard.T1.Droid
 			public const int menu_main = 2131492868;
 			
 			// aapt resource value: 0x7f0c0005
-			public const int sub_main = 2131492869;
+			public const int menu_myshop = 2131492869;
+			
+			// aapt resource value: 0x7f0c0006
+			public const int sub_main = 2131492870;
 			
 			static Menu()
 			{
