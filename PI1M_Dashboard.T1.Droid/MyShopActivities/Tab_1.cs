@@ -47,7 +47,7 @@ namespace PI1M_Dashboard.T1.Droid
 		LinearLayout llMST1HiCommentProd;
 
 		Button btn_seemore_popularprod;
-		Button btn_seemore_newprod;
+		Button btn_seemore_latestprod;
 		Button btn_seemore_localprod;
 		Button btn_seemore_reviewprod;
 
@@ -63,7 +63,7 @@ namespace PI1M_Dashboard.T1.Droid
 			//TextView tvText = v.FindViewById<TextView> (Resource.Id.textView);
 //			recyclerView = v.FindViewById <RecyclerView> (Resource.Id.recyclerView);
 			btn_seemore_popularprod = v.FindViewById <Button> (Resource.Id.btn_seemore_popularprod);
-			btn_seemore_newprod = v.FindViewById <Button> (Resource.Id.btn_seemore_newprod);
+			btn_seemore_latestprod = v.FindViewById <Button> (Resource.Id.btn_seemore_newprod);
 			btn_seemore_localprod = v.FindViewById <Button> (Resource.Id.btn_seemore_localprod);
 			btn_seemore_reviewprod = v.FindViewById <Button> (Resource.Id.btn_seemore_reviewprod);
 
@@ -79,28 +79,28 @@ namespace PI1M_Dashboard.T1.Droid
 			//see more popular
 			btn_seemore_popularprod.Click += delegate {
 				var intent = new Intent (Application.Context, typeof(Product_Listing));
-				intent.PutExtra ("tab", 1);
+				intent.PutExtra ("action_type", "popular");
 				StartActivity (intent);
 			};
 
 			//see more latest
-			btn_seemore_newprod.Click += delegate {
+			btn_seemore_latestprod.Click += delegate {
 				var intent = new Intent (Application.Context, typeof(Product_Listing));
-				intent.PutExtra ("tab", 0);
+				intent.PutExtra ("action_type", "latest");
 				StartActivity (intent);
 			};
 
 			//see more local
 			btn_seemore_localprod.Click += delegate {
 				var intent = new Intent (Application.Context, typeof(Product_Listing));
-				intent.PutExtra ("tab", 2);
+				intent.PutExtra ("action_type", "local");
 				StartActivity (intent);
 			};
 
 			//see more review
 			btn_seemore_reviewprod.Click += delegate {
 				var intent = new Intent (Application.Context, typeof(Product_Listing));
-				intent.PutExtra ("tab", 3);
+				intent.PutExtra ("action_type", "review");
 				StartActivity (intent);
 			};
 

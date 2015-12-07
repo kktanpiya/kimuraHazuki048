@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="2.3.2" package="com.ingeniworks.dashboarda" android:versionCode="30">
-	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22" />
 	<application android:theme="@style/CustomActionBarTheme" android:icon="@drawable/ic_dbkomunitiico" android:label="Dashboard Komuniti"></application>
 	<permission android:name="com.ingeniworks.PI1M_Dashboard.T1.Droid.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="com.ingeniworks.PI1M_Dashboard.T1.Droid.C2D_MESSAGE" />

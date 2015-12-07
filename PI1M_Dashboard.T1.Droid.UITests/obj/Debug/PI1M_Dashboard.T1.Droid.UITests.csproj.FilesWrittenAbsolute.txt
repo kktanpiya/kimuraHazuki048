@@ -1,0 +1,7 @@
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/bin/Debug/PI1M_Dashboard.T1.Droid.UITests.dll.mdb
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/bin/Debug/PI1M_Dashboard.T1.Droid.UITests.dll
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/obj/Debug/PI1M_Dashboard.T1.Droid.UITests.dll
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/obj/Debug/PI1M_Dashboard.T1.Droid.UITests.dll.mdb
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/bin/Debug/nunit.framework.dll
+/Users/hafiz/Documents/GITHUB/kimuraHazuki048/PI1M_Dashboard.T1.Droid.UITests/bin/Debug/Xamarin.UITest.dll

@@ -16,6 +16,7 @@ using Android.Graphics.Drawables;
 using Android.Graphics;
 using Android.Views.Animations;
 using Android.Support.V4.View;
+using drawer_navigation;
 
 namespace PI1M_Dashboard.T1.Droid
 {
@@ -184,7 +185,6 @@ namespace PI1M_Dashboard.T1.Droid
 			if (e.Position == 0) {
 
 				Intent aboutAct = new Intent (this,typeof(AboutActivity));
-
 				StartActivity (aboutAct);
 
 			}
@@ -196,8 +196,27 @@ namespace PI1M_Dashboard.T1.Droid
 		}
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
-			//MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-			return base.OnCreateOptionsMenu(menu);
+			MenuInflater.Inflate(Resource.Menu.menu_myshop, menu);
+
+			var item = menu.FindItem(Resource.Id.action_search);
+
+			var searchView = MenuItemCompat.GetActionView(item);
+			Android.Support.V7.Widget.SearchView _searchView = searchView.JavaCast<Android.Support.V7.Widget.SearchView>();
+
+			// _searchView.QueryTextChange += (s, e) => _adapter.Filter.InvokeFilter(e.NewText);
+
+			_searchView.QueryTextSubmit += (s, e) =>
+			{
+				// Handle enter/search button on keyboard here
+				Intent intent = new Intent (this,typeof(Product_Listing));
+				intent.PutExtra("action_type","search");
+				intent.PutExtra("search_term",e.Query);
+				StartActivity (intent);
+
+				e.Handled = true;
+				_searchView.ClearFocus ();
+			};
+			return true;
 		}
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{

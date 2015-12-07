@@ -19,47 +19,68 @@ using Android.Graphics;
 using Android.Support.V4.View;
 using System.Threading.Tasks;
 using PI1M_Dashboard.T1.Droid;
+using Android.Support.V7.Widget;
 
 namespace drawer_navigation
 {
-	[Activity (Label = "Produk Popular")]
+	[Activity (Label = "")]																																
 	public class Product_Listing : AppCompatActivity
 	{        
 		DrawerLayout drawerLayout;
 
+		private  List<MyShop_WebService.Localprod_Datum> prodList = new List<MyShop_WebService.Localprod_Datum>();
+		ProgressBar progressBar;
+		private RecyclerView mRecyclerView;
+
+		int currentPage;
+		int lastPage;
+
+		RecyclerView.LayoutManager mLayoutManager;
+		public Product_RecyclerViewAdapter recyclerAdapter;
+
+		LinearLayout llMyShopErrorLayout;
 
 		protected override void OnCreate(Bundle savedInstanceState) 
 		{
 			base.OnCreate (savedInstanceState);
 
-			SetContentView (Resource.Layout.MyShop_listall_main);
+			SetContentView (Resource.Layout.MyShop_listall_fragment_list);
 
+			CoordinatorLayout cl = FindViewById <CoordinatorLayout> (Resource.Id.main_content);
 
 			var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
 			SetSupportActionBar (toolbar);
 			toolbar.SetBackgroundColor (Color.ParseColor ("#9C27B0"));
 
+
 			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 			SupportActionBar.SetDisplayShowHomeEnabled (true);
-//			SupportActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_menu);
-//			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
-//			drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
-//
-//			var navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
-//			if (navigationView != null)
-//				setupDrawerContent(navigationView);
 
-			var viewPager = FindViewById<ViewPager> (Resource.Id.viewpager);
-			if (viewPager != null) {
-				setupViewPager (viewPager);
-				int tab = Intent.GetIntExtra ("tab",-1);
-				viewPager.SetCurrentItem (tab, true);
-				viewPager.OffscreenPageLimit = 3;
+			mRecyclerView = FindViewById <RecyclerView> (Resource.Id.recyclerView);
+			progressBar = FindViewById <ProgressBar> (Resource.Id.pbHeaderProgress);
+			llMyShopErrorLayout = (LinearLayout)FindViewById (Resource.Id.llMyShopErrorLayout);
+
+			currentPage = 1; 
+
+			string action_type = Intent.GetStringExtra ("action_type");
+
+			ThreadPool.QueueUserWorkItem (o => { setupData(currentPage , action_type); });
+
+			if (mRecyclerView != null) {
+				mRecyclerView.HasFixedSize = true;
+
+				var layoutManager = new LinearLayoutManager (this);
+
+				var onScrollListener = new Product_RecyclerViewAdapter.ViewOnScrollListener (layoutManager);
+				onScrollListener.LoadMoreEvent += (object sender, EventArgs e) => {
+					currentPage++;
+					if (currentPage <= lastPage) {
+						ThreadPool.QueueUserWorkItem (o => { setupData (currentPage , action_type); });
+					}
+				};
+				mRecyclerView.AddOnScrollListener (onScrollListener);
+				mRecyclerView.SetLayoutManager (layoutManager);
 			}
-
-//			var tabs = FindViewById<com.refractored.PagerSlidingTabStrip> (Resource.Id.tabs);
-//			tabs.SetViewPager (viewPager);
-
 
 			//			var fab = FindViewById<FloatingActionButton> (Resource.Id.fab);
 			//			fab.Click += (sender, e) => {
@@ -70,15 +91,8 @@ namespace drawer_navigation
 			//		
 			//
 			//			}; 
-		
 		}
 			
-//		public override bool OnCreateOptionsMenu (IMenu menu) 
-//		{
-//			MenuInflater.Inflate(Resource.Menu.sample_actions, menu);
-//			return true;
-//		}
-
 		public override bool OnOptionsItemSelected (IMenuItem item) 
 		{
 //			switch (item.ItemId) {
@@ -101,79 +115,68 @@ namespace drawer_navigation
 
 		}
 
-		void setupViewPager (Android.Support.V4.View.ViewPager viewPager) 
+		private void setupData(int page, string action_type)
 		{
-			var adapter = new Adapter (SupportFragmentManager);
-			int tab = Intent.GetIntExtra ("tab",-1);
+			try{
 
-			switch(tab){
+				string jsonString = "";
 
-			case 0:
-				adapter.AddFragment (new List_Fragment_latestProd (this), "Produk Terbaru");
-				SupportActionBar.Title = "Produk Terbaru";
+				string searchTerm = Intent.GetStringExtra ("search_term");
 
-				break;
-			case 1:
-				adapter.AddFragment (new List_Fragment_popularProd (this), "");
-				SupportActionBar.Title = "Produk Popular";
-				break;
+				switch(action_type)
+				{
+					case "popular"    : jsonString = MyShop_WebService.GetJsonPopularProduct (page);
+								  	  break;
+					case "latest"	  : jsonString = MyShop_WebService.GetJsonLatestProduct (page);
+									  break;
+					case "review"     : jsonString = MyShop_WebService.GetJsonReviewProduct (page);
+						              break ;
+					case "search"     : jsonString = MyShop_WebService.getSearchResult (searchTerm, page);
+									  break ;
+//					case "local"    : jsonString = MyShop_WebService.GetJsonLocalProduct (MyShop_Tab_1.token_dashboard,page);
+//										  break ;
+				}
 
-			case 2:
-				adapter.AddFragment (new List_Fragment_localProd (this), "Produk Setempat");
-				SupportActionBar.Title = "Produk Setempat";
-				break;
+				var ProdData = JsonConvert.DeserializeObject<MyShop_WebService.Root_Localprod> (jsonString);
+				lastPage = ProdData.last_page;
+				var totalItem = ProdData.total;
 
-			case 3:
-				adapter.AddFragment (new List_Fragment_reviewProd (this), "Produk Paling Tinggi Komen");
-				SupportActionBar.Title = "Produk Paling Tinggi Komen";
-				break;
+				foreach (var tempData in ProdData.data) {
+					prodList.Add (new MyShop_WebService.Localprod_Datum () {
+						id = tempData.id,
+						title = tempData.title,
+						price = "RM "+tempData.price,
+						created_at = tempData.created_at,
+						url_photo_thumb = tempData.url_photo_thumb,
+					});
+				}
 
 
+				this.RunOnUiThread (() => {
+					if (currentPage == 1) {
+						mLayoutManager = new LinearLayoutManager (this);
+						mRecyclerView.SetLayoutManager (mLayoutManager);
+
+						recyclerAdapter = new Product_RecyclerViewAdapter (this, prodList, totalItem);
+						mRecyclerView.SetAdapter (recyclerAdapter);
+
+						progressBar.Visibility = ViewStates.Gone;
+
+					}
+					else{
+						recyclerAdapter.NotifyDataSetChanged ();
+
+					}
+				});
 			}
-//			adapter.AddFragment (new List_Fragment_reviewProd (this), "Produk Komen Tertinggi");
-
-			viewPager.Adapter = adapter;
+			catch(Exception ex){
+				this.RunOnUiThread (() => {
+					llMyShopErrorLayout.Visibility = ViewStates.Visible;
+					progressBar.Visibility = ViewStates.Gone;
+				});
+			}
+		
 		}
-
-		void setupDrawerContent(NavigationView navigationView) 
-		{
-			navigationView.NavigationItemSelected += (sender, e) => {
-				//e.P0.SetChecked (true);
-				drawerLayout.CloseDrawers ();
-			};
-		}
-			
-
-		class Adapter : Android.Support.V4.App.FragmentPagerAdapter 
-		{
-			List<V4Fragment> fragments = new List<V4Fragment> ();
-			List<string> fragmentTitles = new List<string> ();
-
-			public Adapter (V4FragmentManager fm) : base (fm)
-			{
-			}
-
-			public void AddFragment (V4Fragment fragment, String title) 
-			{
-				fragments.Add(fragment);
-				fragmentTitles.Add(title);
-			}
-
-			public override V4Fragment GetItem(int position) 
-			{
-				return fragments [position];
-			}
-
-			public override int Count {
-				get { return fragments.Count; }
-			}
-
-			public override Java.Lang.ICharSequence GetPageTitleFormatted (int position)
-			{
-				return new Java.Lang.String (fragmentTitles [position]);
-			}
-
-		} 
 	}
 
 	public class ClickListener : Java.Lang.Object, View.IOnClickListener
