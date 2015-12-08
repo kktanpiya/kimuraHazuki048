@@ -31,7 +31,6 @@ namespace MyQuiz
 
 		public static Button btn_send;
 		EditText et_eventCode;
-		//TextView tv_message;
 		Android.Widget.ProgressBar pb;
 
 		string event_code; 
@@ -48,8 +47,6 @@ namespace MyQuiz
 			//user_id
 			uid = Intent.GetStringExtra("UserID");
 			Console.Error.WriteLine ("uid"+uid);
-
-
 
 			//check for completion status
 			try {
@@ -71,7 +68,6 @@ namespace MyQuiz
 
 			et_eventCode = FindViewById<EditText> (Resource.Id.editText_kod);
 			btn_send = FindViewById<Button> (Resource.Id.btnmasuk_kod);
-			//tv_message = FindViewById<TextView> (Resource.Id.tv_errorMsg);
 			pb = FindViewById<Android.Widget.ProgressBar> (Resource.Id.progress_bar);
 			pb.Visibility = ViewStates.Gone;
 
@@ -518,7 +514,6 @@ namespace MyQuiz
 			QuestionAnswer.questionList.Clear();
 
 		}
-
 
 		private void btnTryAgain_Click (object sender, EventArgs e)
 		{

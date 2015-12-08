@@ -113,7 +113,7 @@ namespace MyQuiz
 			public string message { get; set;}
 			public int luckyNo { get; set;}
 		}
-		//end submit quiz
+		//end validate submit quiz
 
 
 		// begin: validate event open

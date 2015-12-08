@@ -229,7 +229,6 @@
     <Compile Include="MyQuizActivities\Commonlib.cs" />
     <Compile Include="MyQuizActivities\MyQuiz_MainActivity.cs" />
     <Compile Include="MyQuizActivities\QuestionAnswer.cs" />
-    <Compile Include="MyQuizActivities\QuestionsAnwserDB.cs" />
     <Compile Include="MyQuizActivities\QuizDB.cs" />
     <Compile Include="MyQuizActivities\ShowDrawCode.cs" />
     <Compile Include="MyQuizActivities\Webservice.cs" />
