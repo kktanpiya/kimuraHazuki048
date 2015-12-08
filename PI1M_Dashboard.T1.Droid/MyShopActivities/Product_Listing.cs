@@ -40,13 +40,12 @@ namespace drawer_navigation
 
 		LinearLayout llMyShopErrorLayout;
 
-		protected override void OnCreate(Bundle savedInstanceState) 
+		protected async override void OnCreate(Bundle savedInstanceState) 
 		{
 			base.OnCreate (savedInstanceState);
 
 			SetContentView (Resource.Layout.MyShop_listall_fragment_list);
 
-			CoordinatorLayout cl = FindViewById <CoordinatorLayout> (Resource.Id.main_content);
 
 			var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
 			SetSupportActionBar (toolbar);
@@ -64,7 +63,9 @@ namespace drawer_navigation
 
 			string action_type = Intent.GetStringExtra ("action_type");
 
-			ThreadPool.QueueUserWorkItem (o => { setupData(currentPage , action_type); });
+			//run setup and get title e.g:search,latest product etc
+			var title = await Task.Factory.StartNew(() => setupData(currentPage , action_type));
+			Title = title;
 
 			if (mRecyclerView != null) {
 				mRecyclerView.HasFixedSize = true;
@@ -82,6 +83,8 @@ namespace drawer_navigation
 				mRecyclerView.SetLayoutManager (layoutManager);
 			}
 
+
+
 			//			var fab = FindViewById<FloatingActionButton> (Resource.Id.fab);
 			//			fab.Click += (sender, e) => {
 			//					Snackbar.Make (fab, "Here's a snackbar!", Snackbar.LengthLong).SetAction ("Action",
@@ -92,15 +95,15 @@ namespace drawer_navigation
 			//
 			//			}; 
 		}
-			
+
 		public override bool OnOptionsItemSelected (IMenuItem item) 
 		{
-//			switch (item.ItemId) {
-//			case Android.Resource.Id.Home:
-//				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
-//				return true;
-//			}
-//			return base.OnOptionsItemSelected (item);
+			//			switch (item.ItemId) {
+			//			case Android.Resource.Id.Home:
+			//				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+			//				return true;
+			//			}
+			//			return base.OnOptionsItemSelected (item);
 			switch (item.ItemId) {
 
 			case Android.Resource.Id.Home:
@@ -115,8 +118,9 @@ namespace drawer_navigation
 
 		}
 
-		private void setupData(int page, string action_type)
+		private string setupData(int page, string action_type)
 		{
+			string title = "";
 			try{
 
 				string jsonString = "";
@@ -125,16 +129,20 @@ namespace drawer_navigation
 
 				switch(action_type)
 				{
-					case "popular"    : jsonString = MyShop_WebService.GetJsonPopularProduct (page);
-								  	  break;
-					case "latest"	  : jsonString = MyShop_WebService.GetJsonLatestProduct (page);
-									  break;
-					case "review"     : jsonString = MyShop_WebService.GetJsonReviewProduct (page);
-						              break ;
-					case "search"     : jsonString = MyShop_WebService.getSearchResult (searchTerm, page);
-									  break ;
-//					case "local"    : jsonString = MyShop_WebService.GetJsonLocalProduct (MyShop_Tab_1.token_dashboard,page);
-//										  break ;
+				case "popular"    : jsonString = MyShop_WebService.GetJsonPopularProduct (page);
+					title ="Produk Popular";
+					break;
+				case "latest"	  : jsonString = MyShop_WebService.GetJsonLatestProduct (page);
+					title ="Produk Terbaru";
+					break;
+				case "review"     : jsonString = MyShop_WebService.GetJsonReviewProduct (page);
+					title ="Produk Komen Tertinggi";
+					break ;
+				case "search"     : jsonString = MyShop_WebService.getSearchResult (searchTerm, page);
+					title ="Carian : '"+searchTerm+"'";
+					break ;
+					//					case "local"    : jsonString = MyShop_WebService.GetJsonLocalProduct (MyShop_Tab_1.token_dashboard,page);
+					//										  break ;
 				}
 
 				var ProdData = JsonConvert.DeserializeObject<MyShop_WebService.Root_Localprod> (jsonString);
@@ -175,7 +183,7 @@ namespace drawer_navigation
 					progressBar.Visibility = ViewStates.Gone;
 				});
 			}
-		
+			return title;
 		}
 	}
 
@@ -196,5 +204,3 @@ namespace drawer_navigation
 		}
 	} 
 }
-
-
