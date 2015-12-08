@@ -18,7 +18,7 @@ namespace MyQuiz
 			set;
 		}
 
-		public string ic_No 
+		public string user_id 
 		{
 			get;
 			set;

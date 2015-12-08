@@ -40,7 +40,7 @@ namespace DataAccess
 		public QuizDB getCompletionStat (string id)
 		{
 			lock (locker) {
-				return Table<QuizDB>().FirstOrDefault(x => x.ic_No == id);
+				return Table<QuizDB>().FirstOrDefault(x => x.user_id == id);
 			}
 		}
 
@@ -52,14 +52,14 @@ namespace DataAccess
 			}
 		}
 
-		public int updateCompletionStat (int drawNo, string icNO) 
+		public int updateCompletionStat (int drawNo, string user_id) 
 		{
 			lock (locker) 
 			{
 //				if (item.id != 0) 
 //				{
 				//return Update (quiz);
-				return Execute("UPDATE QuizDB set completion_Stat='1', draw_No='"+drawNo+"' where ic_No='"+icNO+"'");
+				return Execute("UPDATE QuizDB set completion_Stat='1', draw_No='"+drawNo+"' where user_id='"+user_id+"'");
 //				}
 			}
 		}

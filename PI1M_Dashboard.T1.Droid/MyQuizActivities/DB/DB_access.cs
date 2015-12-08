@@ -34,19 +34,19 @@ namespace DataAccess
 			stat = me.db.saveData (quiz);
 
 			if (stat == 1) {
-				Console.Error.WriteLine ("Success saved IC No.: " + quiz.ic_No);
+				Console.Error.WriteLine ("Success saved user_id: " + quiz.user_id);
 			} else {
-				Console.Error.WriteLine ("Failed saved IC No.: " + quiz.ic_No);
+				Console.Error.WriteLine ("Failed saved user_id: " + quiz.user_id);
 			}
 
 			return stat;
 		}
 
-		public static int updateCompletionStat (int drawNo, string icNo)
+		public static int updateCompletionStat (int drawNo, string user_id)
 		{
 			int stat = -1;
 
-			stat = me.db.updateCompletionStat (drawNo, icNo);
+			stat = me.db.updateCompletionStat (drawNo, user_id);
 
 			return stat;
 		}

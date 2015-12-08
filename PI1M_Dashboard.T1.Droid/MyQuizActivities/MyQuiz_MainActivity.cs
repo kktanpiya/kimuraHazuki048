@@ -160,7 +160,7 @@ namespace MyQuiz
 						QuizDB quizDB = new QuizDB ();
 						quizDB.completion_Stat = 0;
 						quizDB.event_Code = event_code;
-						quizDB.ic_No = uid;
+						quizDB.user_id = uid;
 						quizDB.event_Id = data.event_id;
 
 						try {
