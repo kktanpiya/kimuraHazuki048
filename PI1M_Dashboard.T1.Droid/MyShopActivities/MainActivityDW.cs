@@ -202,6 +202,7 @@ namespace PI1M_Dashboard.T1.Droid
 
 			var searchView = MenuItemCompat.GetActionView(item);
 			Android.Support.V7.Widget.SearchView _searchView = searchView.JavaCast<Android.Support.V7.Widget.SearchView>();
+			_searchView.QueryHint ="Carian produk";
 
 			// _searchView.QueryTextChange += (s, e) => _adapter.Filter.InvokeFilter(e.NewText);
 
