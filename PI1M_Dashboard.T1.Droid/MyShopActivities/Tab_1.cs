@@ -45,8 +45,7 @@ namespace PI1M_Dashboard.T1.Droid
 			token_dashboard = tokenData;
 
 			View v = inflater.Inflate(Resource.Layout.ProdukMain ,container ,false);
-			//TextView tvText = v.FindViewById<TextView> (Resource.Id.textView);
-//			recyclerView = v.FindViewById <RecyclerView> (Resource.Id.recyclerView);
+
 			btn_seemore_popularprod = v.FindViewById <Button> (Resource.Id.btn_seemore_popularprod);
 			btn_seemore_latestprod = v.FindViewById <Button> (Resource.Id.btn_seemore_newprod);
 			btn_seemore_localprod = v.FindViewById <Button> (Resource.Id.btn_seemore_localprod);
@@ -58,7 +57,6 @@ namespace PI1M_Dashboard.T1.Droid
 			ll_localProdAll = v.FindViewById <LinearLayout> (Resource.Id.ll_localProdAll);
 			llMST1HiCommentProd = v.FindViewById <LinearLayout> (Resource.Id.llMST1HiCommentProd);
 
-		
 			//see more popular
 			btn_seemore_popularprod.Click += delegate {
 				var intent = new Intent (Application.Context, typeof(Product_Listing));
@@ -476,7 +474,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 		private void ItemClicked(object sender, int e)
 		{
-			//Toast.MakeText (Activity, "Position is "+e, ToastLength.Short).Show();
 			Intent AnnouncementDetails = new Intent (Activity, typeof(Announcement_Details));
 
 			AnnouncementDetails.PutExtra ("ArticleTitle",mySkoolTitleList[e]);
