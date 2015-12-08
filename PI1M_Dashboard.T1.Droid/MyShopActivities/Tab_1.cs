@@ -286,14 +286,11 @@ namespace PI1M_Dashboard.T1.Droid
 				tvMST1LPTile4ProdName.Text = latestProdName [3];
 				setupImage(ivMST1LPTile4ProdPic, latestProdImage[3]);
 			});
-
-
 		}
 
 		private void LocalProdSetup()
 		{
 			List<MyShop_WebService.Localprod_Datum> prodList = new List<MyShop_WebService.Localprod_Datum>();
-
 
 			TextView tvMST1PSTile1ProdPrice = (TextView)Activity.FindViewById (Resource.Id.tvMST1PSTile1ProdPrice);
 			TextView tvMST1PSTile1ProdName = (TextView)Activity.FindViewById (Resource.Id.tvMST1PSTile1ProdName);
@@ -400,7 +397,6 @@ namespace PI1M_Dashboard.T1.Droid
 					ll_localProdNoData.Visibility = ViewStates.Visible;
 				});
 			}
-
 		}
 
 		private void HighestCommentProdSetup()
@@ -492,7 +488,6 @@ namespace PI1M_Dashboard.T1.Droid
 			WebServices wbs = new WebServices ();
 			return wbs.getMyShopFeed ();
 		}
-
 	}
 
 	public class MyShop_ListDataHolderList
@@ -508,9 +503,7 @@ namespace PI1M_Dashboard.T1.Droid
 		public int DataNum
 		{
 			get { 
-				
 				return mListData.Count; 
-			
 			}
 		}
 
@@ -518,7 +511,6 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 			get { return mListData[i];}
 		}
-			
 	}
 }
 
