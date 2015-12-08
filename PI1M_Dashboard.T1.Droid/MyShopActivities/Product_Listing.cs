@@ -149,6 +149,15 @@ namespace drawer_navigation
 				lastPage = ProdData.last_page;
 				var totalItem = ProdData.total;
 
+				//if zero item, display no data
+				if(totalItem == 0)
+				{
+					this.RunOnUiThread (() => {
+						llMyShopErrorLayout.Visibility = ViewStates.Visible;
+						progressBar.Visibility = ViewStates.Gone;
+					});
+				}
+
 				foreach (var tempData in ProdData.data) {
 					prodList.Add (new MyShop_WebService.Localprod_Datum () {
 						id = tempData.id,
