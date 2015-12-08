@@ -62,7 +62,6 @@ namespace PI1M_Dashboard.T1.Droid
 			MySoal_PetiMasuk_ViewHolder vh = new MySoal_PetiMasuk_ViewHolder (itemView, OnClick);
 			*/
 			RecyclerView.ViewHolder vh;
-			Console.Error.WriteLine ("viewType"+viewType);
 			if (viewType == VIEW_TYPES.NORMAL || viewType == VIEW_TYPES.ENDOFLIST) {
 				View itemView = LayoutInflater.From (parent.Context).Inflate (Resource.Layout.MySoal_ViewListItem, parent, false);
 				vh = new MySoal_PetiMasuk_ViewHolder (itemView, OnClick);
@@ -158,7 +157,6 @@ namespace PI1M_Dashboard.T1.Droid
 			//			Console.Error.WriteLine ("isRefeshing"+MySoal_Tab_1.isRefeshing);
 			//
 			if (MySoal_Tab_1.isRefreshing) {
-				Console.Error.WriteLine ("masuk");
 				MySoal_Tab_1.worker.CancelAsync ();
 
 				if (MySoal_Tab_1.worker.CancellationPending) { 
@@ -173,8 +171,6 @@ namespace PI1M_Dashboard.T1.Droid
 			var lastVisibleItem = ((LinearLayoutManager)recyclerView.GetLayoutManager()).FindLastCompletelyVisibleItemPosition();
 
 			if ((lastVisibleItem+1) == totalItemCount) {
-				Console.Error.WriteLine ("scrolll222");
-
 				LoadMoreEvent (this, null);
 			}
 		}

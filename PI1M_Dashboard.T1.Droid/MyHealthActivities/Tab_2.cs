@@ -79,10 +79,8 @@ namespace PI1M_Dashboard.T1.Droid
 				var onScrollListener = new MyHealthBWRecyclerViewOnScrollListener (layoutManager);
 
 				onScrollListener.LoadMoreEvent += (object sender, EventArgs e) => {
-					Console.Error.WriteLine ("isRefeshing" + isRefreshing);
 					page++;
 					if (page <= lastPage && isRefreshing == false) {
-						Console.Error.WriteLine ("masuk");
 
 						ThreadPool.QueueUserWorkItem (o => {
 							setupMyHealthData (page);

@@ -115,7 +115,6 @@ namespace PI1M_Dashboard.T1.Droid
 			//			Console.Error.WriteLine ("isRefeshing"+MySoal_Tab_1.isRefeshing);
 			//
 			if (MyHealth_Tab_2.isRefreshing) {
-				Console.Error.WriteLine ("masuk");
 				MyHealth_Tab_2.worker.CancelAsync ();
 
 				if (MyHealth_Tab_2.worker.CancellationPending) { 
@@ -130,7 +129,6 @@ namespace PI1M_Dashboard.T1.Droid
 			var lastVisibleItem = ((LinearLayoutManager)recyclerView.GetLayoutManager()).FindLastCompletelyVisibleItemPosition();
 
 			if ((lastVisibleItem+1) == totalItemCount) {
-				Console.Error.WriteLine ("scrolll222");
 
 				LoadMoreEvent (this, null);
 			}

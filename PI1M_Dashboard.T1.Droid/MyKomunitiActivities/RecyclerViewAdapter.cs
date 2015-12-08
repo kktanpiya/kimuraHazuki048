@@ -67,7 +67,6 @@ namespace PI1M_Dashboard.T1.Droid
 			*/
 
 			RecyclerView.ViewHolder vh;
-			Console.Error.WriteLine ("viewType"+viewType);
 			if (viewType == VIEW_TYPES.NORMAL || viewType == VIEW_TYPES.ENDOFLIST) {
 				View itemView = LayoutInflater.From (parent.Context).Inflate (Resource.Layout.MyKomuniti_ViewListItem, parent, false);
 				vh = new MyKomuniti_ViewHolder (itemView, OnClick);
@@ -210,7 +209,6 @@ namespace PI1M_Dashboard.T1.Droid
 			//			Console.Error.WriteLine ("isRefeshing"+MySoal_Tab_1.isRefeshing);
 			//
 			if (MyKomuniti_Tab_1.isRefreshing) {
-				Console.Error.WriteLine ("masuk");
 				MyKomuniti_Tab_1.worker.CancelAsync ();
 
 				if (MyKomuniti_Tab_1.worker.CancellationPending) { 
@@ -225,7 +223,6 @@ namespace PI1M_Dashboard.T1.Droid
 			var lastVisibleItem = ((LinearLayoutManager)recyclerView.GetLayoutManager()).FindLastCompletelyVisibleItemPosition();
 
 			if ((lastVisibleItem+1) == totalItemCount) {
-				Console.Error.WriteLine ("scrolll222");
 
 				LoadMoreEvent (this, null);
 			}
