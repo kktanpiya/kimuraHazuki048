@@ -74,9 +74,7 @@ namespace PI1M_Dashboard.T1.Droid
 				Console.Error.WriteLine ("internet off");
 				dialogErrorInternet (context, errorInternet, close);
 				return false;
-
 			}
-
 		}
 
 		//no dialog alert
@@ -155,12 +153,8 @@ namespace PI1M_Dashboard.T1.Droid
 					});
 				alertDialog = alertDialogBuilder.Create ();
 				alertDialog.Show ();
-
-
 			});
 		}
-
-
 	}
 }
 

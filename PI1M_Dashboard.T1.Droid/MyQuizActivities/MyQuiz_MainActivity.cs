@@ -39,12 +39,10 @@ namespace MyQuiz
 			base.OnCreate (bundle);
 			//Ask for action bar to show
 			Window.RequestFeature (WindowFeatures.ActionBar);
-			//Setup our action bar title and icon
-			//ActionBar.Title = "MyQuiz ";
 
 			SetContentView (Resource.Layout.MyQuiz_MainActivity);
 
-			//user_id
+			//get user_id from main
 			uid = Intent.GetStringExtra("UserID");
 			Console.Error.WriteLine ("uid"+uid);
 
@@ -64,7 +62,6 @@ namespace MyQuiz
 				activity2.PutExtra ("drawNo", drawNo);
 				StartActivity (activity2);
 			}
-
 
 			et_eventCode = FindViewById<EditText> (Resource.Id.editText_kod);
 			btn_send = FindViewById<Button> (Resource.Id.btnmasuk_kod);
@@ -115,15 +112,12 @@ namespace MyQuiz
 					//hide loading and show send button
 					pb.Visibility = ViewStates.Invisible;
 					btn_send.Visibility = ViewStates.Visible;
-
 			   }
-
 			};
 		}
 				
 		private async void ClickFunction()
 		{
-
 			//get imei
 			var telephonyManager = (TelephonyManager) GetSystemService(TelephonyService);
 			string imei = telephonyManager.DeviceId;
@@ -139,15 +133,11 @@ namespace MyQuiz
 			if (!String.IsNullOrEmpty (imei)) {
 				try {	
 					var json_validateEventCode = await Task.Factory.StartNew (() => Webservice.ws_validateEventCode (et_eventCode.Text, imei, uid));
-				
+					Webservice.validateEventCode data = JsonConvert.DeserializeObject<Webservice.validateEventCode> (json_validateEventCode);
+
 					//hide loading and show send button
 					pb.Visibility = ViewStates.Invisible;
 					btn_send.Visibility = ViewStates.Visible;
-
-					//var json_validateEventCode = Webservice.ws_validateEventCode (et_eventCode.Text, imei, uid);
-					Console.Error.WriteLine (json_validateEventCode);
-					Webservice.validateEventCode data = JsonConvert.DeserializeObject<Webservice.validateEventCode> (json_validateEventCode);
-
 
 					if (data.success == 1) {
 
@@ -169,7 +159,6 @@ namespace MyQuiz
 
 						}
 
-
 						//loop and store question and answer into list
 						foreach (var temp in data.quizs) {
 							if (temp.answer == 0) {
@@ -177,12 +166,10 @@ namespace MyQuiz
 							} else {
 								QuestionAnswer.answerList.Add (true);
 							}
-
 							QuestionAnswer.questionList.Add (temp.question);
 						}
 
-						//tv_message.Visibility = ViewStates.Invisible;
-
+						//bundle to be sent for question fragment 
 						Bundle msg = new Bundle ();
 						msg.PutInt ("currentQuestion", 1);
 						msg.PutBoolean ("anwser", QuestionAnswer.answerList [0]);
@@ -195,7 +182,7 @@ namespace MyQuiz
 						signUpDialog.Arguments = msg;
 						signUpDialog.Cancelable = false;
 						signUpDialog.Show (transaction, "dialog fragment");
-
+					
 					} else if (data.success == 0) {
 
 						Snackbar snackbar = Snackbar
@@ -208,6 +195,7 @@ namespace MyQuiz
 						tv.SetTextColor (Color.White);
 
 						snackbar.Show ();
+
 					} else if (data.success == 3) {
 						AlertDialog.Builder alert = new AlertDialog.Builder (this);
 
@@ -245,13 +233,12 @@ namespace MyQuiz
 						alert.Show ();
 					});
 
-
 					//hide loading and show send button
 					pb.Visibility = ViewStates.Invisible;
 					btn_send.Visibility = ViewStates.Visible;
 				}
 			} else {
-
+				//if no imei/android,cannot proceed 
 				Snackbar snackbar = Snackbar
 					.Make (btn_send, "Ralat! Gajet anda tiada imei/androidid", Snackbar.LengthLong)
 					.SetAction ("OK", delegate {
@@ -294,7 +281,6 @@ namespace MyQuiz
 		TextView tv_QuestionIndicator;
 		TextView tv_Question;
 
-
 		bool anwser;
 		int currentQuestion;
 		static string user_id;
@@ -322,7 +308,6 @@ namespace MyQuiz
 			tv_QuestionIndicator = view.FindViewById<TextView> (Resource.Id.tv_QuestionIndicator);
 			tv_Question = view.FindViewById<TextView> (Resource.Id.tv_Question);
 
-
 			pb = view.FindViewById<Android.Widget.ProgressBar> (Resource.Id.progressbar_submitquiz);
 			pb.Visibility = ViewStates.Gone;
 
@@ -330,8 +315,7 @@ namespace MyQuiz
 			currentQuestion = Arguments.GetInt ("currentQuestion");
 			anwser = Arguments.GetBoolean ("anwser");
 
-
-			//only get value if question is 1 (from main)
+			//only get value if currentQuestion is 1 (data from main)
 			if (currentQuestion == 1) {
 				Console.Error.WriteLine(user_id = Arguments.GetString ("user_id"));
 				Console.Error.WriteLine(event_id = Arguments.GetInt ("event_id"));
@@ -347,7 +331,6 @@ namespace MyQuiz
 			btn_tryAgain.Click += btnTryAgain_Click;
 			btn_nextQuestion.Click += btnNextQuestion_Click;
 
-
 			//close quiz
 			btn_Close.Click += btnClose_Click;
 
@@ -356,7 +339,6 @@ namespace MyQuiz
 
 		void btnClose_Click (object sender, EventArgs e)
 		{
-
 			var context = Activity;
 
 			AlertDialog.Builder builder = new AlertDialog.Builder (context);
@@ -412,7 +394,6 @@ namespace MyQuiz
 						endQuiz();
 					};
 				}
-			
 			}
 		}
 
@@ -431,7 +412,6 @@ namespace MyQuiz
 					radioButtonSalah.Enabled = false;
 					rl_betul.Visibility = ViewStates.Invisible;
 					radioButtonSalah.Checked = false;
-
 				}
 			} 
 			else if(currentQuestion == QuestionAnswer.questionList.Count) 
@@ -506,7 +486,6 @@ namespace MyQuiz
 			} else {
 				pb.Visibility = ViewStates.Invisible;
 				btn_soalanTamat.Visibility = ViewStates.Visible;
-
 			}
 
 			//clear array quiz,question
@@ -546,9 +525,7 @@ namespace MyQuiz
 		{
 			Dialog.Window.RequestFeature (WindowFeatures.NoTitle);
 			base.OnActivityCreated (savedInstanceState);
-			//Dialog.Window.Attributes.WindowAnimations = Resource.Style.dialog_animation;
 		}
-
 	}
 }
 

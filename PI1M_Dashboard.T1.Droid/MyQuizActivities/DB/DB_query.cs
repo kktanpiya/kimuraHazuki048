@@ -56,11 +56,7 @@ namespace DataAccess
 		{
 			lock (locker) 
 			{
-//				if (item.id != 0) 
-//				{
-				//return Update (quiz);
 				return Execute("UPDATE QuizDB set completion_Stat='1', draw_No='"+drawNo+"' where user_id='"+user_id+"'");
-//				}
 			}
 		}
 
