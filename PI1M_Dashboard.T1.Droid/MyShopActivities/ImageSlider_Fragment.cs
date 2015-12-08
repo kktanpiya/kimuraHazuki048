@@ -33,22 +33,18 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 			base.OnCreate (savedInstanceState);
 
-//			pb_loadingImage = Activity.FindViewById <ProgressBar>(Resource.Id.pb_loadingImage);
 			position = Arguments.GetInt ("position");
 		}
 
 		public override Android.Views.View OnCreateView (Android.Views.LayoutInflater inflater, Android.Views.ViewGroup container, Bundle savedInstanceState)
 		{
-
 			var root = inflater.Inflate(Resource.Layout.fragment_card, container, false);
 			ImageView iv = root.FindViewById<ImageView> (Resource.Id.imageview);
 		
-
 			Picasso.With (Activity)
 				.Load(listImageThumbsUrl[position])
 				.Placeholder (Resource.Drawable.placeholder_poster)
 				.Into(iv);
-
 
 			iv.Click += (object sender, System.EventArgs e) => popup(listImageOriUrl[position]);
 
@@ -62,8 +58,6 @@ namespace PI1M_Dashboard.T1.Droid
 			activity2.PutExtra ("url", url);
 			StartActivity (activity2);		
 		}
-
-
 	}
 }
 

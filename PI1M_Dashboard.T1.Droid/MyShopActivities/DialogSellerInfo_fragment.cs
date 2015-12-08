@@ -27,8 +27,6 @@ namespace myShopDescription
 			this.phone = phone;
 			this.email = email;
 			this.gstID = gstID;
-
-
 		}
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -49,7 +47,6 @@ namespace myShopDescription
 
 		public override void OnActivityCreated (Bundle savedInstanceState)
 		{
-
 			Dialog.Window.RequestFeature (WindowFeatures.NoTitle);
 			base.OnActivityCreated (savedInstanceState);
 			Dialog.Window.Attributes.WindowAnimations = Resource.Style.dialog_animation;

@@ -26,9 +26,8 @@ namespace drawer_navigation
 	[Activity (Label = "")]																																
 	public class Product_Listing : AppCompatActivity
 	{        
-		DrawerLayout drawerLayout;
 
-		private  List<MyShop_WebService.Localprod_Datum> prodList = new List<MyShop_WebService.Localprod_Datum>();
+		private  List<MyShop_WebService.Product_Datum> prodList = new List<MyShop_WebService.Product_Datum>();
 		ProgressBar progressBar;
 		private RecyclerView mRecyclerView;
 
@@ -46,7 +45,6 @@ namespace drawer_navigation
 
 			SetContentView (Resource.Layout.MyShop_listall_fragment_list);
 
-
 			var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
 			SetSupportActionBar (toolbar);
 			toolbar.SetBackgroundColor (Color.ParseColor ("#9C27B0"));
@@ -63,7 +61,7 @@ namespace drawer_navigation
 
 			string action_type = Intent.GetStringExtra ("action_type");
 
-			//run setup and get title e.g:search,latest product etc
+			//run setupdata and get title e.g:search,latest product etc
 			var title = await Task.Factory.StartNew(() => setupData(currentPage , action_type));
 			Title = title;
 
@@ -82,9 +80,7 @@ namespace drawer_navigation
 				mRecyclerView.AddOnScrollListener (onScrollListener);
 				mRecyclerView.SetLayoutManager (layoutManager);
 			}
-
-
-
+				
 			//			var fab = FindViewById<FloatingActionButton> (Resource.Id.fab);
 			//			fab.Click += (sender, e) => {
 			//					Snackbar.Make (fab, "Here's a snackbar!", Snackbar.LengthLong).SetAction ("Action",
@@ -115,7 +111,6 @@ namespace drawer_navigation
 				return base.OnOptionsItemSelected (item);
 
 			}
-
 		}
 
 		private string setupData(int page, string action_type)
@@ -145,7 +140,7 @@ namespace drawer_navigation
 					//										  break ;
 				}
 
-				var ProdData = JsonConvert.DeserializeObject<MyShop_WebService.Root_Localprod> (jsonString);
+				var ProdData = JsonConvert.DeserializeObject<MyShop_WebService.Root_product> (jsonString);
 				lastPage = ProdData.last_page;
 				var totalItem = ProdData.total;
 
@@ -159,7 +154,7 @@ namespace drawer_navigation
 				}
 
 				foreach (var tempData in ProdData.data) {
-					prodList.Add (new MyShop_WebService.Localprod_Datum () {
+					prodList.Add (new MyShop_WebService.Product_Datum () {
 						id = tempData.id,
 						title = tempData.title,
 						price = "RM "+tempData.price,
@@ -167,7 +162,6 @@ namespace drawer_navigation
 						url_photo_thumb = tempData.url_photo_thumb,
 					});
 				}
-
 
 				this.RunOnUiThread (() => {
 					if (currentPage == 1) {

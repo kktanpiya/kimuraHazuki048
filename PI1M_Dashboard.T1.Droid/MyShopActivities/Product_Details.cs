@@ -71,7 +71,6 @@ namespace PI1M_Dashboard.T1.Droid
 			progress.SetCancelable(false);
 			progress.Show();
 
-
 			tv_price = FindViewById <TextView> (Resource.Id.tv_price);
 			tv_prodTitle = FindViewById <TextView> (Resource.Id.tv_prodTitle);
 			wv_prodDesc = FindViewById <WebView> (Resource.Id.wv_prodDesc);
@@ -85,14 +84,12 @@ namespace PI1M_Dashboard.T1.Droid
 			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 			SupportActionBar.SetDisplayShowHomeEnabled (true);
 
-
 			//call addToCart method
 			//			btn_addToCart.Click += (sender, e) => {
 			//				addToCart();
 			//			};
 
 			btn_sellerInfo.Click += btnSellerInfo_click;
-
 		}	
 
 
@@ -101,14 +98,6 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 			base.OnDestroy ();
 		}
-
-
-		//		public override bool OnCreateOptionsMenu (IMenu menu) 
-		//		{
-		//			MenuInflater.Inflate(Resource.Menu.product_detail, menu);
-		//			IMenuItem item = menu.FindItem (Resource.Id.menu_cart);
-		//			return true;
-		//		}
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
@@ -138,7 +127,6 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 
 			if (worker.CancellationPending) { 
-				Console.Error.WriteLine ("masukiniii");
 				return;
 			}
 
@@ -166,9 +154,8 @@ namespace PI1M_Dashboard.T1.Droid
 
 			foreach (var temp in prodDetails.photos) 
 			{
-				listImagethumbs.Add ("http://myshop.pi1m.my/productImage/thumbs_dashboard/"+temp.name);
-				listImageOri.Add ("http://myshop.pi1m.my/productImage/original/"+temp.name);
-
+				listImagethumbs.Add (temp.url_photo_thumb_dashboard);
+				listImageOri.Add (temp.url_photo_original);
 			}
 
 			ImagePagerAdapter adapter = new ImagePagerAdapter(SupportFragmentManager, listImagethumbs, listImageOri);

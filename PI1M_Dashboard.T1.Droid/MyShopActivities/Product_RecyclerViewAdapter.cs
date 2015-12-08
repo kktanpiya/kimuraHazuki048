@@ -20,9 +20,9 @@ namespace PI1M_Dashboard.T1.Droid
 		Activity parent;
 
 		int totalItem;
-		private List<MyShop_WebService.Localprod_Datum> prodList;
+		private List<MyShop_WebService.Product_Datum> prodList;
 
-		public Product_RecyclerViewAdapter (Activity context, List<MyShop_WebService.Localprod_Datum> prodList,int totalItem)
+		public Product_RecyclerViewAdapter (Activity context, List<MyShop_WebService.Product_Datum> prodList,int totalItem)
 		{
 			parent = context;
 			context.Theme.ResolveAttribute (Resource.Attribute.selectableItemBackground,typedValue, true);
@@ -47,7 +47,6 @@ namespace PI1M_Dashboard.T1.Droid
 				txtPrice = view.FindViewById<TextView>(Resource.Id.txtPrice);
 				txtProdName = view.FindViewById<TextView>(Resource.Id.txtProdName);
 				txtProdDate = view.FindViewById<TextView>(Resource.Id.txtProdDate);
-
 			}
 		}
 
@@ -58,15 +57,14 @@ namespace PI1M_Dashboard.T1.Droid
 			public ProgressViewHolder (View itemView) : base (itemView)
 			{
 				progressBar = itemView.FindViewById <ProgressBar> (Resource.Id.progress_bar);
-
 			}
 		}
 
-		protected class VIEW_TYPES {
+		protected class VIEW_TYPES 
+		{
 			public static  int NORMAL = 0;
 			public static  int FOOTER = 1;
 			public static  int ENDOFLIST = 2;
-
 		}
 
 		public override int GetItemViewType (int position)

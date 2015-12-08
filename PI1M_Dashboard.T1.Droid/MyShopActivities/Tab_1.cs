@@ -290,7 +290,7 @@ namespace PI1M_Dashboard.T1.Droid
 
 		private void LocalProdSetup()
 		{
-			List<MyShop_WebService.Localprod_Datum> prodList = new List<MyShop_WebService.Localprod_Datum>();
+			List<MyShop_WebService.Product_Datum> prodList = new List<MyShop_WebService.Product_Datum>();
 
 			TextView tvMST1PSTile1ProdPrice = (TextView)Activity.FindViewById (Resource.Id.tvMST1PSTile1ProdPrice);
 			TextView tvMST1PSTile1ProdName = (TextView)Activity.FindViewById (Resource.Id.tvMST1PSTile1ProdName);
@@ -313,10 +313,10 @@ namespace PI1M_Dashboard.T1.Droid
 
 			try{
 				var jsonString = MyShop_WebService.GetJsonLocalProduct (MyShop_Tab_1.token_dashboard,1);
-				var ProdData = JsonConvert.DeserializeObject<MyShop_WebService.Root_Localprod> (jsonString);
+				var ProdData = JsonConvert.DeserializeObject<MyShop_WebService.Root_product> (jsonString);
 			
 				foreach (var tempData in ProdData.data) {
-					prodList.Add (new MyShop_WebService.Localprod_Datum () {
+					prodList.Add (new MyShop_WebService.Product_Datum () {
 						id = tempData.id,
 						title = tempData.title,
 						price = "RM "+tempData.price,
@@ -487,29 +487,6 @@ namespace PI1M_Dashboard.T1.Droid
 		{
 			WebServices wbs = new WebServices ();
 			return wbs.getMyShopFeed ();
-		}
-	}
-
-	public class MyShop_ListDataHolderList
-	{
-
-		private readonly List<MyShop_ListData> mListData = new List<MyShop_ListData>();
-
-		public MyShop_ListDataHolderList(List<MyShop_ListData> listData)
-		{
-			mListData = listData;
-		}
-
-		public int DataNum
-		{
-			get { 
-				return mListData.Count; 
-			}
-		}
-
-		public MyShop_ListData this [int i]
-		{
-			get { return mListData[i];}
 		}
 	}
 }

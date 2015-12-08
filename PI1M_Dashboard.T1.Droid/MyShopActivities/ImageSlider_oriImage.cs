@@ -25,7 +25,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 			SetContentView (Resource.Layout.popup);
 
-
 			// Create your application here
 			string url = Intent.GetStringExtra ("url") ?? "Data not available";
 			string css = "<style>html, body, #wrapper {height:100%; width: 100%; margin: 0; padding: 0; border: 0;} #wrapper td {vertical-align: middle; text-align: center;} </style>";
@@ -40,8 +39,6 @@ namespace PI1M_Dashboard.T1.Droid
 			SetSupportActionBar (toolbar);
 			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 			SupportActionBar.SetDisplayShowHomeEnabled (true);
-
-			//webView.LoadUrl ("http://www.xamarin.com");
 
 			// Some websites will require Javascript to be enabled
 			webView.Settings.JavaScriptEnabled = true;
@@ -65,16 +62,15 @@ namespace PI1M_Dashboard.T1.Droid
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
-			switch (item.ItemId) {
+			switch (item.ItemId) 
+			{
+				case Android.Resource.Id.Home:
+					this.Finish ();
+					this.OverridePendingTransition (0, 0);
+					return true;
 
-			case Android.Resource.Id.Home:
-				this.Finish ();
-				this.OverridePendingTransition (0, 0);
-				return true;
-
-			default:
-				return base.OnOptionsItemSelected (item);
-
+				default:
+					return base.OnOptionsItemSelected (item);
 			}
 		}
 	}

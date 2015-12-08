@@ -207,21 +207,10 @@
     <Compile Include="Splash.cs" />
     <Compile Include="ExtendedMenuActivities\ModuleSet_MainActivity.cs" />
     <Compile Include="GeneralProgressViewHolder.cs" />
-    <Compile Include="MyShopActivities\Announcement_Details.cs" />
-    <Compile Include="MyShopActivities\Child_Data.cs" />
-    <Compile Include="MyShopActivities\DetailInfo.cs" />
     <Compile Include="MyShopActivities\DialogSellerInfo_fragment.cs" />
-    <Compile Include="MyShopActivities\ExpandableListAdapter.cs" />
-    <Compile Include="MyShopActivities\HeaderInfo.cs" />
-    <Compile Include="MyShopActivities\List_Fragment_latestProd.cs" />
-    <Compile Include="MyShopActivities\List_Fragment_popularProd.cs" />
-    <Compile Include="MyShopActivities\List_Fragment_reviewProd.cs" />
     <Compile Include="MyShopActivities\MainActivityDW.cs" />
     <Compile Include="MyShopActivities\MyLinearLayoutManager.cs" />
     <Compile Include="MyShopActivities\Product_Details.cs" />
-    <Compile Include="MyShopActivities\RecyclerViewAdapter.cs" />
-    <Compile Include="MyShopActivities\SlidingTabScrollView.cs" />
-    <Compile Include="MyShopActivities\SlidingTabStrip.cs" />
     <Compile Include="MyShopActivities\Tab_1.cs" />
     <Compile Include="MyShopActivities\Tab_2.cs" />
     <Compile Include="MyShopActivities\ViewPagerAdapter.cs" />
@@ -240,6 +229,8 @@
     <Compile Include="MyShopActivities\Library\PageIndicator.cs" />
     <Compile Include="MyShopActivities\Product_RecyclerViewAdapter.cs" />
     <Compile Include="MyShopActivities\Product_Listing.cs" />
+    <Compile Include="MyShopActivities\SlidingTabScrollView.cs" />
+    <Compile Include="MyShopActivities\SlidingTabStrip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
