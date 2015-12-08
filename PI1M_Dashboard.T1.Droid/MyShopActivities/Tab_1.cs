@@ -22,25 +22,10 @@ namespace PI1M_Dashboard.T1.Droid
 {
 	public class MyShop_Tab_1 : Android.Support.V4.App.Fragment
 	{
-		//MySkool_ListDataHolder listData;
-		MyShop_ListDataHolderList listData;
-		MyShop_RecyclerViewAdapter recyclerAdapter;
-		RecyclerView recyclerView;
-		RecyclerView.LayoutManager mLayoutManager;
 
-		ImageView imageView1;
-
-		LinearLayout llMSkT1ErrorStatus;
-		TextView tvMSkT1ErrorStatus;
-
-		List<MyShop_ListData> mySkoolListData = new List<MyShop_ListData>();
 		List<string> mySkoolTitleList = new List<string> ();
 		List<string> mySkoolContentList = new List<string> ();
-
 		ProgressDialog progressDialog;
-
-		MultiImageView imageView;
-//		System.Timers.Timer _timer;
 
 		LinearLayout llMST1PopularProd;
 		LinearLayout ll_localProdAll;
@@ -73,8 +58,6 @@ namespace PI1M_Dashboard.T1.Droid
 			ll_localProdAll = v.FindViewById <LinearLayout> (Resource.Id.ll_localProdAll);
 			llMST1HiCommentProd = v.FindViewById <LinearLayout> (Resource.Id.llMST1HiCommentProd);
 
-			//llMSkT1ErrorStatus = (LinearLayout)v.FindViewById (Resource.Id.llMSPT1ErrorStatus);
-			//tvMSkT1ErrorStatus = (TextView)v.FindViewById (Resource.Id.tvMSPT1ErrorStatus);
 		
 			//see more popular
 			btn_seemore_popularprod.Click += delegate {
@@ -113,7 +96,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 			ThreadPool.QueueUserWorkItem (o => { PopularProdSetup(); });
 			ThreadPool.QueueUserWorkItem (o => { LatestProdSetup(); });
-
 //			ThreadPool.QueueUserWorkItem (o => { LocalProdSetup(); });
 			ThreadPool.QueueUserWorkItem (o => { HighestCommentProdSetup(); });
 		}
@@ -124,7 +106,6 @@ namespace PI1M_Dashboard.T1.Droid
 			Picasso.With (Application.Context)
 				.Load (url)
 				.Placeholder (Resource.Drawable.placeholder_poster)
-//				.Transform (new CropSquareTransformation())
 				.Into(image);
 		}
 
@@ -159,7 +140,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 			//popular box 1
 			rl_ProdukPopular1.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", popularProdID[0]);
 				StartActivity (intent);
@@ -167,24 +147,21 @@ namespace PI1M_Dashboard.T1.Droid
 
 			//popular box 2
 			rl_ProdukPopular2.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", popularProdID[1]);
 				StartActivity (intent);
 			};
 
-			//popular box 2
+			//popular box 3
 			rl_ProdukPopular3.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", popularProdID[2]);
 				StartActivity (intent);
 			};
 
 
-			//popular box 2
+			//popular box 4
 			rl_ProdukPopular4.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", popularProdID[3]);
 				StartActivity (intent);
@@ -221,11 +198,8 @@ namespace PI1M_Dashboard.T1.Droid
 				tvMST1PPTile4ProdName.Text = popularProdName [3];
 				setupImage(ivMST1PPTile4ProdPic, popularProdImage[3]);
 			});
-
-
 		}
-
-
+			
 		private void LatestProdSetup()
 		{
 			List<string> latestProdPrice = new List<string> ();
@@ -246,42 +220,38 @@ namespace PI1M_Dashboard.T1.Droid
 			TextView tvMST1LPTile4ProdName = (TextView)Activity.FindViewById (Resource.Id.tvMST1LPTile4ProdName);
 			ImageView ivMST1LPTile4ProdPic = (ImageView)Activity.FindViewById (Resource.Id.ivMST1LPTile4ProdPic);
 
-			RelativeLayout rl_ProdukPopular1 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru1);
-			RelativeLayout rl_ProdukPopular2 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru2);
-			RelativeLayout rl_ProdukPopular3 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru3);
-			RelativeLayout rl_ProdukPopular4 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru4);
+			RelativeLayout rl_ProdukTerbaru1 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru1);
+			RelativeLayout rl_ProdukTerbaru2 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru2);
+			RelativeLayout rl_ProdukTerbaru3 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru3);
+			RelativeLayout rl_ProdukTerbaru4 = (RelativeLayout)Activity.FindViewById (Resource.Id.rl_ProdukTerbaru4);
 
 			string myShopRawData = getMyShopFeedJSONData();
 			var myShopJSONed = JsonConvert.DeserializeObject<WebServices.MyShopFJDRObj> (myShopRawData);
 
-			//popular box 1
-			rl_ProdukPopular1.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
+			//latest box 1
+			rl_ProdukTerbaru1.Click += (object sender, EventArgs e) => {
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", latestProdID[0]);
 				StartActivity (intent);
 			};
 
-			//popular box 2
-			rl_ProdukPopular2.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
+			//latest box 2
+			rl_ProdukTerbaru2.Click += (object sender, EventArgs e) => {
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", latestProdID[1]);
 				StartActivity (intent);
 			};
 
-			//popular box 2
-			rl_ProdukPopular3.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
+			//latest box 3
+			rl_ProdukTerbaru3.Click += (object sender, EventArgs e) => {
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", latestProdID[2]);
 				StartActivity (intent);
 			};
 
 
-			//popular box 2
-			rl_ProdukPopular4.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
+			//latest box 4
+			rl_ProdukTerbaru4.Click += (object sender, EventArgs e) => {
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", latestProdID[3]);
 				StartActivity (intent);
@@ -322,8 +292,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 		}
 
-
-
 		private void LocalProdSetup()
 		{
 			List<MyShop_WebService.Localprod_Datum> prodList = new List<MyShop_WebService.Localprod_Datum>();
@@ -345,7 +313,6 @@ namespace PI1M_Dashboard.T1.Droid
 			LinearLayout ll_localProd2 = (LinearLayout)Activity.FindViewById (Resource.Id.ll_localProd2);
 			LinearLayout ll_localProd3 = (LinearLayout)Activity.FindViewById (Resource.Id.ll_localProd3);
 			LinearLayout ll_localProdNoData = (LinearLayout)Activity.FindViewById (Resource.Id.ll_localProdNoData);
-			LinearLayout ll_localProdAll1  = (LinearLayout)Activity.FindViewById (Resource.Id.ll_localProdAll1);
 //			TextView tv_localTiadaData = (TextView)Activity.FindViewById (Resource.Id.tv_localTiadaData);
 
 
@@ -365,21 +332,18 @@ namespace PI1M_Dashboard.T1.Droid
 
 
 				ll_localProd1.Click += (object sender, EventArgs e) => {
-					int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 					var intent = new Intent (Application.Context, typeof(Product_Details));
 					intent.PutExtra("product_id", Int32.Parse (prodList[0].id));
 					StartActivity (intent);
 				};
 
 				ll_localProd2.Click += (object sender, EventArgs e) => {
-					int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 					var intent = new Intent (Application.Context, typeof(Product_Details));
 					intent.PutExtra("product_id", Int32.Parse (prodList[1].id));
 					StartActivity (intent);
 				};
 
 				ll_localProd3.Click += (object sender, EventArgs e) => {
-					int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 					var intent = new Intent (Application.Context, typeof(Product_Details));
 					intent.PutExtra("product_id", Int32.Parse (prodList[2].id));
 					StartActivity (intent);
@@ -475,21 +439,18 @@ namespace PI1M_Dashboard.T1.Droid
 			}
 
 			iv_prodHighComment1.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", highCommentProdID[0]);
 				StartActivity (intent);
 			};
 
 			iv_prodHighComment2.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", highCommentProdID[1]);
 				StartActivity (intent);
 			};
 
 			iv_prodHighComment3.Click += (object sender, EventArgs e) => {
-				int product_id = (int) (((View) sender).GetTag(Resource.Id.recyclerView));
 				var intent = new Intent (Application.Context, typeof(Product_Details));
 				intent.PutExtra("product_id", highCommentProdID[2]);
 				StartActivity (intent);
@@ -511,13 +472,6 @@ namespace PI1M_Dashboard.T1.Droid
 			});
 			Activity.RunOnUiThread (() => { progressDialog.Hide();});
 
-		}
-
-		private void Test()
-		{
-			//Console.WriteLine ("Checking weight: {0}", llMST1PopularProd.WeightSum);
-			//ll_localProdAll;
-			//llMST1HiCommentProd;
 		}
 
 		private void ItemClicked(object sender, int e)
