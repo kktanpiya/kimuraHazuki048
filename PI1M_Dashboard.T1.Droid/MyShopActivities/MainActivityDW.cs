@@ -48,25 +48,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 			SetContentView (Resource.Layout.MyShop_MainPager);
 
-			/*
-			Android.Support.V7.App.AlertDialog alertDialog;
-			Android.Support.V7.App.AlertDialog.Builder alertDialogBuilder = new Android.Support.V7.App.AlertDialog.Builder (this);
-
-			alertDialogBuilder
-				.SetTitle ("MyShop")
-				//.SetMessage (string.Format ("Maaf. Sila cuba sekali lagi ({0}...).", eLimit))
-				.SetMessage (string.Format ("Akan datang..."))
-				.SetCancelable (true)
-				.SetPositiveButton ("OK", delegate {
-					this.Finish();
-				});
-
-			alertDialog = alertDialogBuilder.Create ();
-
-			alertDialog.Show ();
-
-			*/
-
 			adapter = new MyShop_ViewPagerAdapter (SupportFragmentManager);
 
 			mDrawerLayout = FindViewById<DrawerLayout> (Resource.Id.myShop_Drawer);
@@ -80,11 +61,6 @@ namespace PI1M_Dashboard.T1.Droid
 
 			pager = FindViewById <ViewPager> (Resource.Id.pager);
 			pager.Adapter = adapter;
-
-			//tab is disabled!
-			//tabs = FindViewById<MyShop_SlidingTabScrollView> (Resource.Id.tabs);
-			//tabs.ViewPager = pager;
-			//tabs.Visibility = ViewStates.Gone;
 
 			string UserName = Intent.GetStringExtra ("Email");
 			tvMMLUserEmail.Text = UserName;
@@ -176,12 +152,6 @@ namespace PI1M_Dashboard.T1.Droid
 		}
 		private void ItemExClicked(object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
 		{
-			//if (e.Position == 0) {
-
-			//	Intent mySoalAct = new Intent (this,typeof(MySoal_MainActivity));
-			//	StartActivity (mySoalAct);
-
-			//}
 			if (e.Position == 0) {
 
 				Intent aboutAct = new Intent (this,typeof(AboutActivity));
@@ -203,8 +173,6 @@ namespace PI1M_Dashboard.T1.Droid
 			var searchView = MenuItemCompat.GetActionView(item);
 			Android.Support.V7.Widget.SearchView _searchView = searchView.JavaCast<Android.Support.V7.Widget.SearchView>();
 			_searchView.QueryHint ="Carian produk";
-
-			// _searchView.QueryTextChange += (s, e) => _adapter.Filter.InvokeFilter(e.NewText);
 
 			_searchView.QueryTextSubmit += (s, e) =>
 			{
@@ -240,7 +208,6 @@ namespace PI1M_Dashboard.T1.Droid
 		private void menuItemClicked(object sender, AdapterView.ItemClickEventArgs e)
 		{
 			Console.WriteLine ("[MenuItemClicked] Position: {0}",e.Position);
-			//Toast.MakeText (this, string.Format ("Sedang memuatkan...", e.Position), ToastLength.Short).Show ();
 
 			string tokenAcquired = Intent.GetStringExtra ("Token");
 			string emailAcquired = Intent.GetStringExtra ("Email");
@@ -315,11 +282,9 @@ namespace PI1M_Dashboard.T1.Droid
 				StartActivity (myVoteAct);
 				this.Finish ();
 			}
-
-
 		}
-
 	}
+
 	public class MyShop_MainActivityAdaptersDW : BaseAdapter<MyShop_LeftMenuListItemsDW>
 	{
 		List<MyShop_LeftMenuListItemsDW> dwListItems;
