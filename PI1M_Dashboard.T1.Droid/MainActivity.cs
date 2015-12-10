@@ -512,10 +512,11 @@ namespace PI1M_Dashboard.T1.Droid
 
 			int pos = e.Position - 1;
 
+			//check quiz open or not, for different menu
 			switch (myQuizOpen) 
 			{
 			case true:
-
+				//quiz open
 				if (pos == 0) {
 
 					Intent myKomunitiAct = new Intent (this,typeof(MyQuiz_MainActivity));
@@ -588,6 +589,7 @@ namespace PI1M_Dashboard.T1.Droid
 				break;
 
 			case false:
+				//quiz closed
 
 				if (pos == 0) {
 
