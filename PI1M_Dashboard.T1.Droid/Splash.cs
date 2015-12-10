@@ -76,6 +76,7 @@ using System.Threading.Tasks;
 using MyQuiz;
 using Newtonsoft.Json;
 using DataAccess;
+using Android.Preferences;
 
 namespace PI1M_Dashboard.T1.Droid
 {
@@ -113,8 +114,13 @@ namespace PI1M_Dashboard.T1.Droid
 				}
 			} else {
 
+				//get userid from sharedprefences
+				ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences (this);
+				var userID = prefs.GetString ("userID","");
+
 				try {
-					QuizDB myquizDB = DB_access.getCompletionStat ("10349");
+					Console.Error.WriteLine(userID);
+					QuizDB myquizDB = DB_access.getCompletionStat (userID);
 					int completionStat = myquizDB.completion_Stat;
 					int drawNo = myquizDB.draw_No;
 

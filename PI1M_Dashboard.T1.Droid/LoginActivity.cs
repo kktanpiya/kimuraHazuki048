@@ -24,6 +24,7 @@ using Android.Provider;
 using Android.Net;
 using PI1M_Dashboard.Lib.DLayer.SQLite;
 using Android.Support.Design.Widget;
+using Android.Preferences;
 
 namespace PI1M_Dashboard.T1.Droid
 {
@@ -315,6 +316,12 @@ namespace PI1M_Dashboard.T1.Droid
 						mainActivity.PutExtra ("ICNo", loginData.ic_no);
 						mainActivity.PutExtra ("Token", loginData.token);
 						StartActivity (mainActivity);
+
+						//store SharedPreferences for future use
+						ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences (this);
+						ISharedPreferencesEditor editor = prefs.Edit ();
+						editor.PutString ("userID", loginData.user_id);
+						editor.Apply();      
 
 						MyVote.Const.tokenData = loginData.token;
 						MyVote.Const.siteID = loginData.site_id;
