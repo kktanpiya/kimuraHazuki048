@@ -15,14 +15,14 @@ namespace MyVote
 {			
 	public class MyVoteMAPOAdapter : RecyclerView.Adapter
 	{
-		public static List<dummyData> mVoteData;
+		public static List<posterData> mVoteData;
 		private Activity context;
 		public event EventHandler<int> ItemClick;
 		public int vote_value = 0;
 		private MyVote_YesOrNoDialog YesOrNo;
 
 		int totalItem;
-		public MyVoteMAPOAdapter (Activity context, List<dummyData> data,int totalItem)
+		public MyVoteMAPOAdapter (Activity context, List<posterData> data,int totalItem)
 		{
 			this.context = context;
 			mVoteData = data;

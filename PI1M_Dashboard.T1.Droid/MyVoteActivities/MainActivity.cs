@@ -28,7 +28,7 @@ namespace MyVote
 
 		int page = 1;
 		bool isRefeshing=false;
-		private List<dummyData> mVoteData;
+		private List<posterData> mVoteData;
 
 
 		LinearLayout llMyPosterErrorLayout;
@@ -40,7 +40,6 @@ namespace MyVote
 			SetContentView (Resource.Layout.MyVote_Main);
 
 			progressDialog = ProgressDialog.Show (this, "Sila Tunggu", "Sedang Memuatkan...");
-
 
 			mRecyclerView = FindViewById <RecyclerView> (Resource.Id.recyclerView);
 			var toolbar = FindViewById <Toolbar> (Resource.Id.toolbar);
@@ -123,7 +122,8 @@ namespace MyVote
 		{
 			int count = FragmentManager.BackStackEntryCount;
 
-			if (count == 0)
+			if (count == 0)						mVoteData.AddRange(MyVote_Data.GetVoteData(page));
+			
 				base.OnBackPressed ();
 			else
 				FragmentManager.PopBackStack ();

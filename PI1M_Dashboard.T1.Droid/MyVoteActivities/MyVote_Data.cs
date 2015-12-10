@@ -20,12 +20,12 @@ namespace MyVote
 		{
 		}
 
-		public static List<dummyData> GetVoteData(int page)
+		public static List<posterData> GetVoteData(int page)
 		{
 
 			var jsonString = MyVote_Webservices.GetJsonStringValue(page);
 			Log.Debug ("jsonString", jsonString);
-			var myVoteData = new List<dummyData> ();
+			var myVoteData = new List<posterData> ();
 			var data = JsonConvert.DeserializeObject <JsonObject> (jsonString);
 
 			//get last_page and total item
@@ -37,7 +37,7 @@ namespace MyVote
 			{
 				foreach (var tempData in data.data) 
 				{
-					myVoteData.Add (new dummyData () 
+					myVoteData.Add (new posterData () 
 					{
 						imageId = tempData.id,
 						imageString = tempData.path,
