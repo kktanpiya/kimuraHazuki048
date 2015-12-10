@@ -40,6 +40,7 @@ namespace MyVote
 				UnvoteDialog ();
 			}
 		}
+
 		//keluar bila poster tk kena vote lagi
 		public void VoteDialog()
 		{

@@ -9,7 +9,6 @@ namespace MyVote
 {			
 	public static class SetImageBitmap
 	{
-		static readonly Task<bool> falseTask = Task.FromResult(false);
 
 		public async static Task<Bitmap> GetImageBitmapFromUrl(string url)
 		{

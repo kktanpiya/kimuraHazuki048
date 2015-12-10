@@ -22,12 +22,9 @@ namespace MyVote
 		private MyVoteMAPOAdapter mVoteAdapter;
 
 		private RecyclerView mRecyclerView;
-		private MyVote_VerifyVoteButton myVoteVerify;
 		public View imageHeader { get; set;}
 
 		ProgressDialog progressDialog;
-		private static MyVote_Data myvote_Data;
-		private static int vote_value;
 
 		int page = 1;
 		bool isRefeshing=false;
@@ -35,10 +32,8 @@ namespace MyVote
 
 
 		LinearLayout llMyPosterErrorLayout;
-		TextView tvMyPosterErrorLayout;
 
 		private int lastPage;
-		private int totalItem;
 		protected  override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -46,8 +41,6 @@ namespace MyVote
 
 			progressDialog = ProgressDialog.Show (this, "Sila Tunggu", "Sedang Memuatkan...");
 
-			//initiliaze jsonvalue
-//			MyVote_Data myVoteData = new MyVote_Data();
 
 			mRecyclerView = FindViewById <RecyclerView> (Resource.Id.recyclerView);
 			var toolbar = FindViewById <Toolbar> (Resource.Id.toolbar);
@@ -58,11 +51,11 @@ namespace MyVote
 
 			//error layout
 			llMyPosterErrorLayout = (LinearLayout)FindViewById (Resource.Id.llMyPosterErrorLayout);
-			tvMyPosterErrorLayout = (TextView)FindViewById (Resource.Id.tvMyPosterErrorLayout);
 
 			setupMyVoteData (page);
 
 
+			//loading next page
 			if (mRecyclerView != null ) {
 				mRecyclerView.HasFixedSize = true;
 
@@ -84,39 +77,44 @@ namespace MyVote
 			}
 		}
 			
-		public void setupMyVoteData(int page){
-
-			if (this != null) {
-					if (page == 1) {
-
-						ThreadPool.QueueUserWorkItem ( o =>{
+		public void setupMyVoteData(int page)
+		{
+			if (this != null) 
+			{
+				 if (page == 1) 
+				{
+					ThreadPool.QueueUserWorkItem ( o =>
+						{
+							//get poster data
 							mVoteData=MyVote_Data.GetVoteData(page);
 							
 							int totalItem=MyVote_Data.getTotalItem();
 
-							if(mVoteData.Count != 0){
+							if(mVoteData.Count != 0)
+							{
 								mVoteAdapter = new MyVoteMAPOAdapter (this, mVoteData, totalItem);
 								RunOnUiThread (() => mRecyclerView.SetAdapter (mVoteAdapter));
-
 							}
-							else{
-								this.RunOnUiThread (() => {
-									llMyPosterErrorLayout.Visibility = ViewStates.Visible;
-								});
-							}
-							RunOnUiThread (() =>progressDialog.Dismiss ());
+						else
+						{
+							this.RunOnUiThread (() => 
+							{
+								llMyPosterErrorLayout.Visibility = ViewStates.Visible;
+							});
+						}
+						RunOnUiThread (() =>progressDialog.Dismiss ());
 
-						});
-					} else {
-
-						ThreadPool.QueueUserWorkItem ( o =>{
-							mVoteData.AddRange(MyVote_Data.GetVoteData(page));
-
-							Console.WriteLine ("sizeeeeeeeeee{0}", mVoteData.Count);
-							RunOnUiThread (() => mVoteAdapter.NotifyDataSetChanged ());
-
-						});
-					}
+					});
+				} 
+				else 
+				{
+					ThreadPool.QueueUserWorkItem ( o =>
+					{
+                       //add new data into list
+						mVoteData.AddRange(MyVote_Data.GetVoteData(page));
+						RunOnUiThread (() => mVoteAdapter.NotifyDataSetChanged ());
+					});
+				}
 			}
 
 		}
@@ -130,8 +128,6 @@ namespace MyVote
 			else
 				FragmentManager.PopBackStack ();
 		}
-
-
 	}
 }
 

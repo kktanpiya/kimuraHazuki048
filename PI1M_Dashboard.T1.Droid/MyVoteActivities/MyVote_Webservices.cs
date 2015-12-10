@@ -19,7 +19,6 @@ namespace MyVote
 			//get token from constant class
 			string token = Const.tokenData;
 			string siteid = Const.siteID;
-			Console.WriteLine ("LIKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:{0}",posterID);
 
 			return webServicesProcess (posterID, like_string, token, siteid);
 
@@ -31,13 +30,14 @@ namespace MyVote
 			//get token from constant class
 			string token = Const.tokenData;
 			string siteid = Const.siteID;
-			Console.WriteLine ("TAKKKKKKKKKKKKKKKKKKKKKKKKKLIKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:{0}",posterID);
 
 			return webServicesProcess (posterID, unlike_string, token, siteid);
 		}
 
 		public static string GetCheckLikeStatus(string posterID)
 		{
+			Console.Error.WriteLine ("sini3");
+
 			const string check_like_string = "http://dashboard.pi1m.my/api/myposter/check-user-like-poster";
 			//get token from constant class
 			string token = Const.tokenData;

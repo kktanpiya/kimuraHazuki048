@@ -32,9 +32,13 @@ namespace MyVote
 			last_page = data.last_page;
 			total_item = data.total;
 
-			if (total_item != 0) {
-				foreach (var tempData in data.data) {
-					myVoteData.Add (new dummyData () {
+			//store poster into list
+			if (total_item != 0) 
+			{
+				foreach (var tempData in data.data) 
+				{
+					myVoteData.Add (new dummyData () 
+					{
 						imageId = tempData.id,
 						imageString = tempData.path,
 						voteStat = tempData.vote,
@@ -46,13 +50,14 @@ namespace MyVote
 			return myVoteData;
 		}
 
-		public static int getLastPage(){
+		public static int getLastPage()
+		{
 			return last_page;
 		}
 
-		public static int getTotalItem(){
+		public static int getTotalItem()
+		{
 			return total_item;
-
 		}
 	}
 }
